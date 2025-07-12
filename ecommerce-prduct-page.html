@@ -1,0 +1,1697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+    <title>Wireless Pro Headphones - Premium Audio Experience | ModernUI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Light Mode Colors */
+            --background: #ffffff;
+            --foreground: #09090b;
+            --muted: #f4f4f5;
+            --muted-foreground: #71717a;
+            --border: #e4e4e7;
+            --input: #e4e4e7;
+            --primary: #18181b;
+            --primary-foreground: #fafafa;
+            --secondary: #f4f4f5;
+            --secondary-foreground: #18181b;
+            --accent: #f4f4f5;
+            --accent-foreground: #18181b;
+            --destructive: #ef4444;
+            --destructive-foreground: #fafafa;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --ring: #18181b;
+            --radius: 0.5rem;
+
+            /* Spacing Scale */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+
+            /* Typography Scale */
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
+            --font-size-5xl: 3rem;
+            --font-size-6xl: 3.75rem;
+
+            /* Mobile-First Layout */
+            --container-padding: 1rem;
+            --header-height: 60px;
+
+            /* Touch-Friendly Sizes */
+            --touch-target: 44px;
+            --button-height: 44px;
+            --input-height: 44px;
+
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
+            color: var(--foreground);
+            background-color: var(--background);
+            font-feature-settings: 'cv11', 'ss01';
+            font-variation-settings: 'opsz' 32;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            -webkit-text-size-adjust: 100%;
+            overflow-x: hidden;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        /* Typography */
+        .text-xs { font-size: var(--font-size-xs); line-height: 1.4; }
+        .text-sm { font-size: var(--font-size-sm); line-height: 1.4; }
+        .text-base { font-size: var(--font-size-base); line-height: 1.6; }
+        .text-lg { font-size: var(--font-size-lg); line-height: 1.6; }
+        .text-xl { font-size: var(--font-size-xl); line-height: 1.5; }
+        .text-2xl { font-size: var(--font-size-2xl); line-height: 1.4; }
+        .text-3xl { font-size: var(--font-size-3xl); line-height: 1.3; }
+        .text-4xl { font-size: var(--font-size-4xl); line-height: 1.2; }
+        .text-5xl { font-size: var(--font-size-5xl); line-height: 1.1; }
+        .text-6xl { font-size: var(--font-size-6xl); line-height: 1; }
+
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+
+        .text-muted-foreground { color: var(--muted-foreground); }
+        .text-success { color: var(--success); }
+        .text-warning { color: var(--warning); }
+        .text-destructive { color: var(--destructive); }
+
+        /* Layout */
+        .flex { display: flex; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .gap-2 { gap: var(--space-2); }
+        .gap-3 { gap: var(--space-3); }
+        .gap-4 { gap: var(--space-4); }
+        .gap-6 { gap: var(--space-6); }
+
+        /* Spacing */
+        .p-2 { padding: var(--space-2); }
+        .p-4 { padding: var(--space-4); }
+        .p-6 { padding: var(--space-6); }
+        .px-3 { padding-left: var(--space-3); padding-right: var(--space-3); }
+        .px-4 { padding-left: var(--space-4); padding-right: var(--space-4); }
+        .py-2 { padding-top: var(--space-2); padding-bottom: var(--space-2); }
+        .py-8 { padding-top: var(--space-8); padding-bottom: var(--space-8); }
+        .py-12 { padding-top: var(--space-12); padding-bottom: var(--space-12); }
+
+        .mb-2 { margin-bottom: var(--space-2); }
+        .mb-4 { margin-bottom: var(--space-4); }
+        .mb-6 { margin-bottom: var(--space-6); }
+        .mb-8 { margin-bottom: var(--space-8); }
+        .mt-4 { margin-top: var(--space-4); }
+        .mt-8 { margin-top: var(--space-8); }
+
+        /* Border */
+        .rounded { border-radius: 0.25rem; }
+        .rounded-lg { border-radius: var(--radius); }
+        .rounded-full { border-radius: 9999px; }
+        .border { border: 1px solid var(--border); }
+
+        /* Background */
+        .bg-muted { background-color: var(--muted); }
+        .bg-success { background-color: var(--success); }
+        .bg-warning { background-color: var(--warning); }
+
+        /* Utility */
+        .hidden { display: none; }
+
+        /* Icons */
+        .icon {
+            width: 1rem;
+            height: 1rem;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .icon-sm {
+            width: 0.75rem;
+            height: 0.75rem;
+        }
+
+        .icon-lg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .icon-xl {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .icon-2xl {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .icon-3xl {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .icon-6xl {
+            width: 6rem;
+            height: 6rem;
+        }
+
+        /* Component Styles */
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            text-decoration: none;
+            border: none;
+            gap: var(--space-2);
+            white-space: nowrap;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+            overflow: hidden;
+            min-height: var(--button-height);
+            padding: var(--space-3) var(--space-6);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:active {
+            transform: translateY(1px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--secondary-foreground);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent);
+        }
+
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--foreground);
+            padding: var(--space-2);
+        }
+
+        .btn-ghost:hover {
+            background-color: var(--accent);
+        }
+
+        .btn-large {
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--font-size-base);
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: var(--space-6);
+            transition: all 0.2s ease-in-out;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Header */
+        .header {
+            border-bottom: 1px solid var(--border);
+            background-color: var(--background);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-weight: 600;
+            font-size: var(--font-size-xl);
+            color: var(--foreground);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--muted-foreground) 100%);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-foreground);
+            font-weight: bold;
+            font-size: var(--font-size-base);
+        }
+
+        /* Navigation */
+        .nav-link {
+            color: var(--muted-foreground);
+            text-decoration: none;
+            font-size: var(--font-size-sm);
+            transition: color 0.2s ease-in-out;
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius);
+        }
+
+        .nav-link:hover {
+            color: var(--foreground);
+            background-color: var(--muted);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: var(--space-4) 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .breadcrumb-nav {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--font-size-sm);
+            color: var(--muted-foreground);
+            flex-wrap: wrap;
+        }
+
+        .breadcrumb-link {
+            color: var(--muted-foreground);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb-link:hover {
+            color: var(--foreground);
+        }
+
+        .breadcrumb-separator {
+            color: var(--muted-foreground);
+        }
+
+        /* Product Layout */
+        .product-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-8);
+            margin: var(--space-8) 0;
+        }
+
+        /* Product Gallery */
+        .product-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+        }
+
+        .main-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--muted) 0%, var(--accent) 100%);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-xl);
+            color: var(--muted-foreground);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-image::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 60%;
+            height: 60%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-3);
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 80px;
+            background: var(--muted);
+            border-radius: var(--radius);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted-foreground);
+            font-size: var(--font-size-xs);
+        }
+
+        .thumbnail:hover,
+        .thumbnail.active {
+            border-color: var(--primary);
+        }
+
+        /* Product Info */
+        .product-info {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-6);
+        }
+
+        .product-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-1) var(--space-3);
+            background-color: var(--success);
+            color: white;
+            border-radius: 9999px;
+            font-size: var(--font-size-xs);
+            font-weight: 500;
+            width: fit-content;
+        }
+
+        .product-title {
+            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0;
+        }
+
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--font-size-sm);
+        }
+
+        .stars {
+            display: flex;
+            gap: 0.125rem;
+        }
+
+        .star {
+            fill: #fbbf24;
+            stroke: #fbbf24;
+        }
+
+        .star-empty {
+            fill: none;
+            stroke: #fbbf24;
+        }
+
+        .price-section {
+            display: flex;
+            align-items: baseline;
+            gap: var(--space-4);
+            margin: var(--space-4) 0;
+            flex-wrap: wrap;
+        }
+
+        .current-price {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            color: var(--foreground);
+        }
+
+        .original-price {
+            font-size: var(--font-size-xl);
+            color: var(--muted-foreground);
+            text-decoration: line-through;
+        }
+
+        .discount-badge {
+            background-color: var(--destructive);
+            color: var(--destructive-foreground);
+            padding: var(--space-1) var(--space-2);
+            border-radius: 0.25rem;
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+        }
+
+        .product-description {
+            color: var(--muted-foreground);
+            line-height: 1.6;
+        }
+
+        /* Product Options */
+        .product-options {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-6);
+        }
+
+        .option-group {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+        }
+
+        .option-label {
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+        }
+
+        .color-options {
+            display: flex;
+            gap: var(--space-3);
+            flex-wrap: wrap;
+        }
+
+        .color-option {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+            position: relative;
+        }
+
+        .color-option.active {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px var(--background), 0 0 0 4px var(--primary);
+        }
+
+        .color-black { background-color: #1f2937; }
+        .color-white { background-color: #f9fafb; border: 1px solid var(--border); }
+        .color-blue { background-color: #3b82f6; }
+
+        .size-options {
+            display: flex;
+            gap: var(--space-3);
+            flex-wrap: wrap;
+        }
+
+        .size-option {
+            padding: var(--space-3) var(--space-4);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background-color: var(--background);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+            min-width: 3rem;
+            text-align: center;
+        }
+
+        .size-option:hover {
+            border-color: var(--primary);
+        }
+
+        .size-option.active {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border-color: var(--primary);
+        }
+
+        /* Quantity and Actions */
+        .purchase-section {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+            padding: var(--space-6);
+            background-color: var(--muted);
+            border-radius: var(--radius);
+        }
+
+        .quantity-section {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            flex-wrap: wrap;
+        }
+
+        .quantity-label {
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+        }
+
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background-color: var(--background);
+        }
+
+        .quantity-btn {
+            padding: var(--space-2);
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted-foreground);
+            transition: color 0.2s;
+            width: var(--touch-target);
+            height: var(--touch-target);
+        }
+
+        .quantity-btn:hover {
+            color: var(--foreground);
+        }
+
+        .quantity-input {
+            width: 3rem;
+            text-align: center;
+            border: none;
+            background: transparent;
+            font-weight: 500;
+            color: var(--foreground);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: var(--space-4);
+            flex-direction: column;
+        }
+
+        /* Product Features */
+        .product-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-4);
+            margin: var(--space-8) 0;
+        }
+
+        .feature-card {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            padding: var(--space-4);
+            background-color: var(--muted);
+            border-radius: var(--radius);
+        }
+
+        .feature-icon {
+            padding: var(--space-2);
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border-radius: var(--radius);
+        }
+
+        .feature-content h4 {
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+            margin-bottom: var(--space-1);
+        }
+
+        .feature-content p {
+            font-size: var(--font-size-xs);
+            color: var(--muted-foreground);
+        }
+
+        /* Tabs */
+        .product-tabs {
+            margin-top: var(--space-12);
+        }
+
+        .tab-buttons {
+            display: flex;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: var(--space-8);
+            overflow-x: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .tab-buttons::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab-button {
+            padding: var(--space-4) var(--space-6);
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--muted-foreground);
+            transition: all 0.2s;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .tab-button.active {
+            color: var(--foreground);
+            border-bottom-color: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Reviews */
+        .review-summary {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-8);
+            margin-bottom: var(--space-8);
+            padding: var(--space-6);
+            background-color: var(--muted);
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .review-score {
+            text-align: center;
+        }
+
+        .review-score .score {
+            font-size: var(--font-size-5xl);
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .review-distribution {
+            flex: 1;
+        }
+
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            margin-bottom: var(--space-2);
+        }
+
+        .rating-bar-fill {
+            flex: 1;
+            height: 0.5rem;
+            background-color: var(--border);
+            border-radius: 9999px;
+            overflow: hidden;
+        }
+
+        .rating-bar-progress {
+            height: 100%;
+            background-color: #fbbf24;
+            transition: width 0.3s ease;
+        }
+
+        .review-item {
+            padding: var(--space-6) 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-3);
+        }
+
+        .reviewer-avatar {
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .review-meta {
+            flex: 1;
+        }
+
+        .review-meta .name {
+            font-weight: 600;
+            font-size: var(--font-size-sm);
+        }
+
+        .review-meta .date {
+            font-size: var(--font-size-xs);
+            color: var(--muted-foreground);
+        }
+
+        /* Related Products */
+        .related-products {
+            margin-top: var(--space-16);
+        }
+
+        .section-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            margin-bottom: var(--space-8);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-6);
+        }
+
+        .product-card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: all 0.2s;
+            background-color: var(--background);
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--muted-foreground);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background-color: var(--muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted-foreground);
+        }
+
+        .product-card-content {
+            padding: var(--space-4);
+        }
+
+        .product-card-title {
+            font-weight: 600;
+            margin-bottom: var(--space-2);
+            font-size: var(--font-size-sm);
+        }
+
+        .product-card-price {
+            font-weight: 700;
+            color: var(--foreground);
+        }
+
+        /* Stock Status */
+        .stock-status {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            margin-top: var(--space-2);
+        }
+
+        .stock-indicator {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+        }
+
+        .in-stock .stock-indicator {
+            background-color: var(--success);
+        }
+
+        .low-stock .stock-indicator {
+            background-color: var(--warning);
+        }
+
+        .out-of-stock .stock-indicator {
+            background-color: var(--destructive);
+        }
+
+        /* Mobile-first Responsive Design */
+        @media (min-width: 640px) {
+            .container {
+                max-width: 640px;
+                padding: 0 1.5rem;
+            }
+
+            .thumbnail-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .product-features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .review-summary {
+                flex-direction: row;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px;
+                padding: 0 2rem;
+            }
+
+            .product-container {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-12);
+            }
+
+            .main-image {
+                height: 500px;
+            }
+
+            .action-buttons {
+                flex-direction: row;
+            }
+
+            .nav-link {
+                display: inline-block;
+            }
+
+            .tab-button {
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+
+            .quantity-section {
+                flex-wrap: nowrap;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1024px;
+            }
+
+            .product-features {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .container {
+                max-width: 1200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 var(--space-3);
+            }
+
+            .price-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: var(--space-2);
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .purchase-section {
+                position: sticky;
+                bottom: 0;
+                margin: 0 calc(var(--space-3) * -1);
+                border-radius: 0;
+                border-top: 1px solid var(--border);
+            }
+        }
+
+        /* Animation for loading state */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .animate-spin {
+            animation: spin 1s linear infinite;
+        }
+
+        /* Smooth transitions */
+        .transition-all {
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* Focus states for accessibility */
+        button:focus,
+        input:focus,
+        a:focus {
+            outline: 2px solid var(--ring);
+            outline-offset: 2px;
+        }
+
+        /* Hide mobile nav on desktop */
+        @media (max-width: 767px) {
+            .nav-link {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container flex items-center justify-between p-4">
+            <a href="#" class="logo">
+                <div class="logo-icon">A</div>
+                <span>AudioStore</span>
+            </a>
+            
+            <div class="flex items-center gap-4">
+                <a href="#" class="nav-link">Products</a>
+                <a href="#" class="nav-link">Categories</a>
+                <a href="#" class="nav-link">Support</a>
+                <button class="btn btn-ghost">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                </button>
+                <button class="btn btn-ghost" style="position: relative;">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M9 2C4 2 1 5 1 9c0 7 7 13 11 13 1 0 2 0 3-0.5M23 9c0-4-3-7-8-7"/>
+                        <path d="M23 9c0 1-0.5 2-1 3l-4 1-1.5 4c-0.5 1.5-1.5 2-2.5 2"/>
+                        <circle cx="5" cy="19" r="1"/>
+                        <circle cx="19" cy="19" r="1"/>
+                    </svg>
+                    <span style="position: absolute; top: 0; right: 0; background-color: var(--destructive); color: var(--destructive-foreground); border-radius: 9999px; padding: 0 0.25rem; font-size: 0.625rem; min-width: 1.25rem; height: 1.25rem; display: flex; align-items: center; justify-content: center;">3</span>
+                </button>
+                <button class="btn btn-ghost">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav class="breadcrumb-nav">
+                <a href="#" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="#" class="breadcrumb-link">Audio</a>
+                <span class="breadcrumb-separator">/</span>
+                <a href="#" class="breadcrumb-link">Headphones</a>
+                <span class="breadcrumb-separator">/</span>
+                <span>Wireless Pro Headphones</span>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Product Section -->
+        <div class="product-container">
+            <!-- Product Gallery -->
+            <div class="product-gallery">
+                <div class="main-image" id="mainImage">
+                    <svg class="icon-6xl" viewBox="0 0 24 24">
+                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+                    </svg>
+                </div>
+                <div class="thumbnail-grid">
+                    <div class="thumbnail active" onclick="changeImage(0)">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+                        </svg>
+                    </div>
+                    <div class="thumbnail" onclick="changeImage(1)">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                        </svg>
+                    </div>
+                    <div class="thumbnail" onclick="changeImage(2)">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <div class="thumbnail" onclick="changeImage(3)">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <rect x="1" y="6" width="18" height="12" rx="2" ry="2"/>
+                            <line x1="23" y1="13" x2="23" y2="11"/>
+                            <path d="M5 6V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+                <div class="product-badge">
+                    <svg class="icon-sm" viewBox="0 0 24 24" style="fill: currentColor;">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                    Best Seller
+                </div>
+
+                <h1 class="product-title">Wireless Pro Headphones</h1>
+
+                <div class="product-rating">
+                    <div class="stars">
+                        <svg class="icon star" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="icon star" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="icon star" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="icon star" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        <svg class="icon star" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <span class="font-medium">4.8</span>
+                    <span class="text-muted-foreground">(2,847 reviews)</span>
+                </div>
+
+                <div class="price-section">
+                    <span class="current-price">$199.99</span>
+                    <span class="original-price">$299.99</span>
+                    <span class="discount-badge">33% OFF</span>
+                </div>
+
+                <div class="stock-status in-stock">
+                    <div class="stock-indicator"></div>
+                    <span>In Stock - Only 12 left</span>
+                </div>
+
+                <p class="product-description">
+                    Experience premium audio quality with our flagship Wireless Pro Headphones. Featuring advanced noise cancellation, 30-hour battery life, and crystal-clear sound reproduction. Perfect for music lovers, professionals, and anyone who demands the best in audio technology.
+                </p>
+
+                <!-- Product Options -->
+                <div class="product-options">
+                    <div class="option-group">
+                        <label class="option-label">Color</label>
+                        <div class="color-options">
+                            <div class="color-option color-black active" onclick="selectColor(this)"></div>
+                            <div class="color-option color-white" onclick="selectColor(this)"></div>
+                            <div class="color-option color-blue" onclick="selectColor(this)"></div>
+                        </div>
+                    </div>
+
+                    <div class="option-group">
+                        <label class="option-label">Size</label>
+                        <div class="size-options">
+                            <div class="size-option" onclick="selectSize(this)">S</div>
+                            <div class="size-option active" onclick="selectSize(this)">M</div>
+                            <div class="size-option" onclick="selectSize(this)">L</div>
+                            <div class="size-option" onclick="selectSize(this)">XL</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Purchase Section -->
+                <div class="purchase-section">
+                    <div class="quantity-section">
+                        <label class="quantity-label">Quantity</label>
+                        <div class="quantity-selector">
+                            <button class="quantity-btn" onclick="changeQuantity(-1)">
+                                <svg class="icon" viewBox="0 0 24 24">
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                            <input type="number" class="quantity-input" value="1" min="1" max="12" id="quantity">
+                            <button class="quantity-btn" onclick="changeQuantity(1)">
+                                <svg class="icon" viewBox="0 0 24 24">
+                                    <line x1="12" y1="5" x2="12" y2="19"/>
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary btn-large" onclick="addToCart()">
+                            <svg class="icon-lg" viewBox="0 0 24 24">
+                                <path d="M9 2C4 2 1 5 1 9c0 7 7 13 11 13 1 0 2 0 3-0.5M23 9c0-4-3-7-8-7"/>
+                                <path d="M23 9c0 1-0.5 2-1 3l-4 1-1.5 4c-0.5 1.5-1.5 2-2.5 2"/>
+                                <circle cx="5" cy="19" r="1"/>
+                                <circle cx="19" cy="19" r="1"/>
+                            </svg>
+                            Add to Cart
+                        </button>
+                        <button class="btn btn-secondary btn-large" onclick="addToWishlist()">
+                            <svg class="icon-lg" viewBox="0 0 24 24">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                            Wishlist
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Features -->
+        <div class="product-features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg class="icon-lg" viewBox="0 0 24 24">
+                        <rect x="1" y="3" width="15" height="13"/>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                        <circle cx="5.5" cy="18.5" r="2.5"/>
+                        <circle cx="18.5" cy="18.5" r="2.5"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h4>Free Shipping</h4>
+                    <p>On orders over $50</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg class="icon-lg" viewBox="0 0 24 24">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        <polyline points="9 12 12 15 16 10"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h4>2 Year Warranty</h4>
+                    <p>Full manufacturer coverage</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg class="icon-lg" viewBox="0 0 24 24">
+                        <polyline points="1 4 1 10 7 10"/>
+                        <polyline points="23 20 23 14 17 14"/>
+                        <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h4>30-Day Returns</h4>
+                    <p>No questions asked</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg class="icon-lg" viewBox="0 0 24 24">
+                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h4>24/7 Support</h4>
+                    <p>Expert technical assistance</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Tabs -->
+        <div class="product-tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" onclick="showTab('description')">Description</button>
+                <button class="tab-button" onclick="showTab('specifications')">Specifications</button>
+                <button class="tab-button" onclick="showTab('reviews')">Reviews (2,847)</button>
+                <button class="tab-button" onclick="showTab('shipping')">Shipping & Returns</button>
+            </div>
+
+            <div id="description" class="tab-content active">
+                <h3 class="font-semibold text-lg mb-4">Product Description</h3>
+                <p class="mb-4">The Wireless Pro Headphones represent the pinnacle of audio engineering, combining cutting-edge technology with premium materials to deliver an unparalleled listening experience. Whether you're a professional musician, an audiophile, or simply someone who appreciates great sound, these headphones will exceed your expectations.</p>
+
+                <h4 class="font-semibold mb-2">Key Features:</h4>
+                <ul class="mb-4" style="list-style: disc; margin-left: 1.5rem;">
+                    <li>Advanced Active Noise Cancellation with multiple modes</li>
+                    <li>High-resolution audio support up to 24-bit/192kHz</li>
+                    <li>30-hour battery life with quick charge capability</li>
+                    <li>Premium memory foam ear cushions for all-day comfort</li>
+                    <li>Multipoint Bluetooth connectivity for seamless device switching</li>
+                    <li>Built-in microphone with crystal-clear voice quality</li>
+                </ul>
+
+                <p>Crafted with premium materials including genuine leather headband and aluminum alloy construction, these headphones are built to last while providing exceptional comfort during extended listening sessions.</p>
+            </div>
+
+            <div id="specifications" class="tab-content">
+                <h3 class="font-semibold text-lg mb-4">Technical Specifications</h3>
+                <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 0.5rem 1rem; font-size: 0.875rem;">
+                    <strong>Driver Size:</strong> <span>40mm dynamic drivers</span>
+                    <strong>Frequency Response:</strong> <span>20Hz - 40kHz</span>
+                    <strong>Impedance:</strong> <span>32 ohms</span>
+                    <strong>Sensitivity:</strong> <span>110 dB SPL/mW</span>
+                    <strong>Battery Life:</strong> <span>30 hours (ANC on), 40 hours (ANC off)</span>
+                    <strong>Charging Time:</strong> <span>2 hours (quick charge: 15 min = 3 hours)</span>
+                    <strong>Bluetooth Version:</strong> <span>5.2 with aptX HD support</span>
+                    <strong>Weight:</strong> <span>250g</span>
+                    <strong>Dimensions:</strong> <span>190 x 170 x 85 mm (folded)</span>
+                    <strong>Materials:</strong> <span>Aluminum alloy, genuine leather, memory foam</span>
+                    <strong>Microphone:</strong> <span>Dual-mic array with noise suppression</span>
+                    <strong>Controls:</strong> <span>Touch controls with voice assistant support</span>
+                </div>
+            </div>
+
+            <div id="reviews" class="tab-content">
+                <div class="review-summary">
+                    <div class="review-score">
+                        <div class="score">4.8</div>
+                        <div class="stars">
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="text-sm text-muted-foreground">Based on 2,847 reviews</div>
+                    </div>
+                    <div class="review-distribution">
+                        <div class="rating-bar">
+                            <span class="text-sm">5★</span>
+                            <div class="rating-bar-fill">
+                                <div class="rating-bar-progress" style="width: 75%"></div>
+                            </div>
+                            <span class="text-sm">75%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="text-sm">4★</span>
+                            <div class="rating-bar-fill">
+                                <div class="rating-bar-progress" style="width: 18%"></div>
+                            </div>
+                            <span class="text-sm">18%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="text-sm">3★</span>
+                            <div class="rating-bar-fill">
+                                <div class="rating-bar-progress" style="width: 5%"></div>
+                            </div>
+                            <span class="text-sm">5%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="text-sm">2★</span>
+                            <div class="rating-bar-fill">
+                                <div class="rating-bar-progress" style="width: 1%"></div>
+                            </div>
+                            <span class="text-sm">1%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span class="text-sm">1★</span>
+                            <div class="rating-bar-fill">
+                                <div class="rating-bar-progress" style="width: 1%"></div>
+                            </div>
+                            <span class="text-sm">1%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">SA</div>
+                        <div class="review-meta">
+                            <div class="name">Sarah Anderson</div>
+                            <div class="date">January 15, 2025</div>
+                        </div>
+                        <div class="stars">
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-muted-foreground">Absolutely love these headphones! The noise cancellation is incredible and the sound quality is pristine. I use them daily for work calls and music. The battery life easily lasts through my longest days. Highly recommend!</p>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-header">
+                        <div class="reviewer-avatar">MJ</div>
+                        <div class="review-meta">
+                            <div class="name">Michael Johnson</div>
+                            <div class="date">January 12, 2025</div>
+                        </div>
+                        <div class="stars">
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg class="icon star" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg class="icon star-empty" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-muted-foreground">Great headphones overall. Sound quality is excellent and they're very comfortable for long listening sessions. The only minor issue is that the touch controls can be a bit sensitive sometimes. Still a solid 4/5!</p>
+                </div>
+
+                <div class="mt-4">
+                    <button class="btn btn-secondary">
+                        Load More Reviews
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="shipping" class="tab-content">
+                <h3 class="font-semibold text-lg mb-4">Shipping & Returns</h3>
+
+                <h4 class="font-semibold mb-2">Shipping Information</h4>
+                <ul class="mb-6" style="list-style: disc; margin-left: 1.5rem;">
+                    <li><strong>Free Standard Shipping:</strong> 5-7 business days on orders over $50</li>
+                    <li><strong>Express Shipping:</strong> 2-3 business days ($9.99)</li>
+                    <li><strong>Overnight Shipping:</strong> 1 business day ($19.99)</li>
+                    <li>Orders placed before 2 PM EST ship the same day</li>
+                    <li>International shipping available to most countries</li>
+                </ul>
+
+                <h4 class="font-semibold mb-2">Return Policy</h4>
+                <ul class="mb-6" style="list-style: disc; margin-left: 1.5rem;">
+                    <li>30-day return window from delivery date</li>
+                    <li>Items must be in original condition with all accessories</li>
+                    <li>Free return shipping with prepaid label</li>
+                    <li>Refunds processed within 3-5 business days</li>
+                    <li>Original shipping costs are non-refundable</li>
+                </ul>
+
+                <h4 class="font-semibold mb-2">Warranty</h4>
+                <p class="text-muted-foreground">All products come with a 2-year manufacturer warranty covering defects in materials and workmanship. Extended warranty options available at checkout.</p>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="related-products">
+            <h2 class="section-title">You Might Also Like</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <svg class="icon-2xl" viewBox="0 0 24 24">
+                            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
+                            <circle cx="12" cy="14" r="4"/>
+                            <line x1="12" y1="6" x2="12.01" y2="6"/>
+                        </svg>
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">Bluetooth Speaker Pro</h3>
+                        <div class="product-card-price">$89.99</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <svg class="icon-2xl" viewBox="0 0 24 24">
+                            <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+                        </svg>
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">Studio Monitor Headphones</h3>
+                        <div class="product-card-price">$149.99</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <svg class="icon-2xl" viewBox="0 0 24 24">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <line x1="12" y1="19" x2="12" y2="23"/>
+                            <line x1="8" y1="23" x2="16" y2="23"/>
+                        </svg>
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">USB Microphone</h3>
+                        <div class="product-card-price">$79.99</div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <svg class="icon-2xl" viewBox="0 0 24 24">
+                            <path d="M17 1l4 4-4 4"/>
+                            <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                            <path d="M7 23l-4-4 4-4"/>
+                            <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                        </svg>
+                    </div>
+                    <div class="product-card-content">
+                        <h3 class="product-card-title">Premium Audio Cable</h3>
+                        <div class="product-card-price">$29.99</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Image gallery functionality
+        function changeImage(index) {
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            const icons = [
+                '<svg class="icon-6xl" viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>',
+                '<svg class="icon-6xl" viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>',
+                '<svg class="icon-6xl" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>',
+                '<svg class="icon-6xl" viewBox="0 0 24 24"><rect x="1" y="6" width="18" height="12" rx="2" ry="2"/><line x1="23" y1="13" x2="23" y2="11"/><path d="M5 6V4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg>'
+            ];
+            const mainImage = document.getElementById('mainImage');
+
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnails[index].classList.add('active');
+
+            mainImage.innerHTML = icons[index];
+        }
+
+        // Color selection
+        function selectColor(element) {
+            document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        // Size selection
+        function selectSize(element) {
+            document.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        // Quantity management
+        function changeQuantity(delta) {
+            const input = document.getElementById('quantity');
+            const currentValue = parseInt(input.value);
+            const newValue = Math.max(1, Math.min(12, currentValue + delta));
+            input.value = newValue;
+        }
+
+        // Tab functionality
+        function showTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active state from all tab buttons
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+
+            // Add active state to clicked button
+            event.target.classList.add('active');
+        }
+
+        // Add to cart functionality
+        function addToCart() {
+            const quantity = document.getElementById('quantity').value;
+            const selectedColor = document.querySelector('.color-option.active');
+            const selectedSize = document.querySelector('.size-option.active');
+
+            // Simulate add to cart with loading state
+            const button = event.target.closest('.btn');
+            const originalContent = button.innerHTML;
+
+            button.innerHTML = '<svg class="icon-lg animate-spin" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Adding...';
+            button.disabled = true;
+
+            setTimeout(() => {
+                button.innerHTML = '<svg class="icon-lg" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Added to Cart!';
+                button.style.backgroundColor = 'var(--success)';
+
+                setTimeout(() => {
+                    button.innerHTML = originalContent;
+                    button.disabled = false;
+                    button.style.backgroundColor = '';
+                }, 2000);
+            }, 1500);
+        }
+
+        // Add to wishlist functionality
+        function addToWishlist() {
+            const button = event.target.closest('.btn');
+            const heart = button.querySelector('svg');
+
+            if (heart.style.fill === 'currentColor') {
+                heart.style.fill = 'none';
+                button.innerHTML = '<svg class="icon-lg" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Wishlist';
+            } else {
+                heart.style.fill = 'currentColor';
+                heart.style.stroke = 'var(--destructive)';
+                heart.style.color = 'var(--destructive)';
+                button.innerHTML = '<svg class="icon-lg" style="fill: currentColor; stroke: var(--destructive); color: var(--destructive);" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg> Saved';
+            }
+        }
+
+        // Smooth scroll behavior for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add ripple effect to buttons
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 600ms linear;
+                    background-color: rgba(255, 255, 255, 0.3);
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    pointer-events: none;
+                `;
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add ripple keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

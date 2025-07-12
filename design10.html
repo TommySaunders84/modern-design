@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModernUI Design System</title>
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Light Mode Colors */
+            --background: #ffffff;
+            --foreground: #09090b;
+            --muted: #f4f4f5;
+            --muted-foreground: #71717a;
+            --border: #e4e4e7;
+            --input: #e4e4e7;
+            --primary: #18181b;
+            --primary-foreground: #fafafa;
+            --secondary: #f4f4f5;
+            --secondary-foreground: #18181b;
+            --accent: #f4f4f5;
+            --accent-foreground: #18181b;
+            --destructive: #ef4444;
+            --destructive-foreground: #fafafa;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --ring: #18181b;
+            --radius: 0.5rem;
+            
+            /* Mobile-First Spacing */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            
+            /* Typography Scale */
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
+            --font-size-5xl: 3rem;
+            --font-size-6xl: 3.75rem;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            
+            /* Mobile-First Layout */
+            --container-padding: 1rem;
+            --header-height: 60px;
+            --touch-target: 44px;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: var(--foreground);
+            background-color: var(--background);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Container System */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        /* Typography Utilities */
+        .text-xs { font-size: var(--font-size-xs); }
+        .text-sm { font-size: var(--font-size-sm); }
+        .text-base { font-size: var(--font-size-base); }
+        .text-lg { font-size: var(--font-size-lg); }
+        .text-xl { font-size: var(--font-size-xl); }
+        .text-2xl { font-size: var(--font-size-2xl); }
+        .text-3xl { font-size: var(--font-size-3xl); }
+        .text-4xl { font-size: var(--font-size-4xl); }
+        .text-5xl { font-size: var(--font-size-5xl); }
+        .text-6xl { font-size: var(--font-size-6xl); }
+
+        .font-light { font-weight: 300; }
+        .font-normal { font-weight: 400; }
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+
+        .text-muted { color: var(--muted-foreground); }
+        .text-center { text-align: center; }
+
+        /* Layout Utilities */
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .flex-col { flex-direction: column; }
+        .gap-1 { gap: var(--space-1); }
+        .gap-2 { gap: var(--space-2); }
+        .gap-3 { gap: var(--space-3); }
+        .gap-4 { gap: var(--space-4); }
+        .gap-6 { gap: var(--space-6); }
+        .gap-8 { gap: var(--space-8); }
+
+        /* Spacing Utilities */
+        .p-1 { padding: var(--space-1); }
+        .p-2 { padding: var(--space-2); }
+        .p-3 { padding: var(--space-3); }
+        .p-4 { padding: var(--space-4); }
+        .p-6 { padding: var(--space-6); }
+        .p-8 { padding: var(--space-8); }
+
+        .py-2 { padding-top: var(--space-2); padding-bottom: var(--space-2); }
+        .py-3 { padding-top: var(--space-3); padding-bottom: var(--space-3); }
+        .py-4 { padding-top: var(--space-4); padding-bottom: var(--space-4); }
+        .py-8 { padding-top: var(--space-8); padding-bottom: var(--space-8); }
+        .py-12 { padding-top: var(--space-12); padding-bottom: var(--space-12); }
+        .py-16 { padding-top: var(--space-16); padding-bottom: var(--space-16); }
+        .py-20 { padding-top: var(--space-20); padding-bottom: var(--space-20); }
+        .py-24 { padding-top: var(--space-24); padding-bottom: var(--space-24); }
+
+        .px-2 { padding-left: var(--space-2); padding-right: var(--space-2); }
+        .px-3 { padding-left: var(--space-3); padding-right: var(--space-3); }
+        .px-4 { padding-left: var(--space-4); padding-right: var(--space-4); }
+        .px-6 { padding-left: var(--space-6); padding-right: var(--space-6); }
+
+        .mb-2 { margin-bottom: var(--space-2); }
+        .mb-3 { margin-bottom: var(--space-3); }
+        .mb-4 { margin-bottom: var(--space-4); }
+        .mb-6 { margin-bottom: var(--space-6); }
+        .mb-8 { margin-bottom: var(--space-8); }
+        .mb-12 { margin-bottom: var(--space-12); }
+        .mt-4 { margin-top: var(--space-4); }
+        .mt-8 { margin-top: var(--space-8); }
+        .mt-12 { margin-top: var(--space-12); }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+
+        /* Position & Layout */
+        .relative { position: relative; }
+        .absolute { position: absolute; }
+        .sticky { position: sticky; }
+        .top-0 { top: 0; }
+        .z-10 { z-index: 10; }
+        .z-50 { z-index: 50; }
+        .z-100 { z-index: 100; }
+
+        /* Borders & Radius */
+        .border { border: 1px solid var(--border); }
+        .border-b { border-bottom: 1px solid var(--border); }
+        .rounded { border-radius: var(--radius); }
+        .rounded-lg { border-radius: calc(var(--radius) * 1.5); }
+        .rounded-full { border-radius: 9999px; }
+
+        /* Background & Colors */
+        .bg-background { background-color: var(--background); }
+        .bg-muted { background-color: var(--muted); }
+        .bg-primary { background-color: var(--primary); }
+        .bg-secondary { background-color: var(--secondary); }
+
+        /* Shadows */
+        .shadow-sm { box-shadow: var(--shadow-sm); }
+        .shadow { box-shadow: var(--shadow); }
+        .shadow-md { box-shadow: var(--shadow-md); }
+        .shadow-lg { box-shadow: var(--shadow-lg); }
+
+        /* Transitions */
+        .transition-all { transition: all 150ms ease-in-out; }
+        .transition-colors { transition: color 150ms ease-in-out, background-color 150ms ease-in-out; }
+        .transition-transform { transition: transform 150ms ease-in-out; }
+
+        /* Hover States */
+        .hover\:shadow-md:hover { box-shadow: var(--shadow-md); }
+        .hover\:shadow-lg:hover { box-shadow: var(--shadow-lg); }
+        .hover\:bg-muted:hover { background-color: var(--muted); }
+        .hover\:bg-primary:hover { background-color: var(--primary); }
+        .hover\:text-foreground:hover { color: var(--foreground); }
+        .hover\:opacity-90:hover { opacity: 0.9; }
+
+        /* Grid System */
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .grid-cols-auto { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+        /* Component Styles */
+
+        /* Header */
+        .header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 50;
+            height: var(--header-height);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            padding: 0 var(--container-padding);
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-weight: 600;
+            font-size: var(--font-size-xl);
+            color: var(--foreground);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--muted-foreground) 100%);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-foreground);
+            font-weight: bold;
+            font-size: var(--font-size-base);
+            transition: transform 0.2s ease;
+        }
+
+        .logo:hover .logo-icon {
+            transform: scale(1.05);
+        }
+
+        /* Navigation */
+        .nav-links {
+            display: none;
+            align-items: center;
+            gap: var(--space-2);
+        }
+
+        .nav-link {
+            color: var(--muted-foreground);
+            text-decoration: none;
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius);
+            font-weight: 500;
+            font-size: var(--font-size-sm);
+            transition: all 150ms ease-in-out;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--foreground);
+            background-color: var(--muted);
+        }
+
+        /* Mobile Menu */
+        .nav-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--touch-target);
+            height: var(--touch-target);
+            background: none;
+            border: none;
+            color: var(--foreground);
+            cursor: pointer;
+            border-radius: var(--radius);
+            transition: background-color 0.2s ease;
+        }
+
+        .nav-toggle:hover {
+            background-color: var(--muted);
+        }
+
+        .nav-toggle-icon {
+            position: relative;
+            width: 20px;
+            height: 2px;
+            background-color: currentColor;
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggle-icon::before,
+        .nav-toggle-icon::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+            transition: all 0.3s ease;
+        }
+
+        .nav-toggle-icon::before {
+            top: -6px;
+        }
+
+        .nav-toggle-icon::after {
+            bottom: -6px;
+        }
+
+        .nav-toggle.active .nav-toggle-icon {
+            background-color: transparent;
+        }
+
+        .nav-toggle.active .nav-toggle-icon::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        .nav-toggle.active .nav-toggle-icon::after {
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 90;
+        }
+
+        .mobile-menu-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: var(--header-height);
+            right: -280px;
+            width: 280px;
+            height: calc(100vh - var(--header-height));
+            background-color: var(--background);
+            border-left: 1px solid var(--border);
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            z-index: 100;
+        }
+
+        .mobile-menu.open {
+            right: 0;
+        }
+
+        .mobile-menu-content {
+            padding: var(--space-6) var(--space-4);
+        }
+
+        .mobile-nav-link {
+            display: block;
+            padding: var(--space-3) var(--space-4);
+            color: var(--muted-foreground);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--font-size-base);
+            border-radius: var(--radius);
+            transition: all 0.2s ease;
+            margin-bottom: var(--space-2);
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            color: var(--foreground);
+            background-color: var(--muted);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            line-height: 1;
+            text-decoration: none;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 150ms ease-in-out;
+            white-space: nowrap;
+            user-select: none;
+            min-height: var(--touch-target);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--secondary-foreground);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent);
+        }
+
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--muted-foreground);
+            border: 1px solid transparent;
+        }
+
+        .btn-ghost:hover {
+            background-color: var(--muted);
+            color: var(--foreground);
+        }
+
+        .btn-lg {
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--font-size-base);
+            min-height: 48px;
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-sm);
+            transition: all 150ms ease-in-out;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-interactive {
+            cursor: pointer;
+        }
+
+        .card-interactive:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* SVG Icons */
+        .icon {
+            width: 1rem;
+            height: 1rem;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .icon-sm {
+            width: 0.875rem;
+            height: 0.875rem;
+        }
+
+        .icon-lg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .icon-xl {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .icon-2xl {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .icon-3xl {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--background) 0%, var(--muted) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: clamp(2rem, 8vw, 3rem);
+            font-weight: 700;
+            margin-bottom: var(--space-4);
+            background: linear-gradient(135deg, var(--foreground) 0%, var(--muted-foreground) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.25rem);
+            color: var(--muted-foreground);
+            margin-bottom: var(--space-8);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-6);
+            margin-top: var(--space-12);
+        }
+
+        .feature-icon {
+            width: 3rem;
+            height: 3rem;
+            background-color: var(--muted);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-4);
+            color: var(--foreground);
+            transition: all 150ms ease-in-out;
+        }
+
+        .feature-card:hover .feature-icon {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            transform: scale(1.05);
+        }
+
+        /* Page States */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .btn {
+                width: auto;
+                max-width: none;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 var(--space-6);
+            }
+
+            .nav-toggle {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: var(--space-8);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: var(--font-size-4xl);
+            }
+
+            .hero-subtitle {
+                font-size: var(--font-size-lg);
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 var(--space-3);
+            }
+
+            .card {
+                padding: var(--space-4);
+            }
+
+            .hero-title {
+                font-size: var(--font-size-3xl);
+            }
+        }
+
+        /* Focus Styles */
+        .btn:focus,
+        .nav-link:focus {
+            outline: 2px solid var(--ring);
+            outline-offset: 2px;
+        }
+
+        /* Selection */
+        ::selection {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: var(--muted);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--muted-foreground);
+            border-radius: var(--radius);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: var(--foreground);
+        }
+
+        /* Content Styles */
+        .content {
+            padding: var(--space-8) 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content h1 {
+            font-size: clamp(1.75rem, 5vw, 2.25rem);
+            font-weight: 700;
+            margin-bottom: var(--space-4);
+            line-height: 1.2;
+        }
+
+        .content h2 {
+            font-size: clamp(1.5rem, 4vw, 1.875rem);
+            font-weight: 600;
+            margin-top: var(--space-8);
+            margin-bottom: var(--space-4);
+            line-height: 1.3;
+        }
+
+        .content h3 {
+            font-size: clamp(1.25rem, 3vw, 1.5rem);
+            font-weight: 600;
+            margin-top: var(--space-6);
+            margin-bottom: var(--space-3);
+            line-height: 1.4;
+        }
+
+        .content p {
+            margin-bottom: var(--space-4);
+            color: var(--muted-foreground);
+            line-height: 1.6;
+        }
+
+        .content ul {
+            margin-bottom: var(--space-4);
+            padding-left: var(--space-6);
+        }
+
+        .content li {
+            margin-bottom: var(--space-2);
+            color: var(--muted-foreground);
+            line-height: 1.5;
+        }
+
+        .code-block {
+            background-color: var(--muted);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: var(--space-4);
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: var(--font-size-sm);
+            margin: var(--space-4) 0;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--muted);
+            border-top: 1px solid var(--border);
+            padding: var(--space-12) 0 var(--space-8);
+            margin-top: var(--space-16);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-8);
+            margin-bottom: var(--space-8);
+        }
+
+        .footer-section h3 {
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: var(--foreground);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--space-2);
+        }
+
+        .footer-links a {
+            color: var(--muted-foreground);
+            text-decoration: none;
+            font-size: var(--font-size-sm);
+            transition: color 150ms ease-in-out;
+        }
+
+        .footer-links a:hover {
+            color: var(--foreground);
+        }
+
+        .footer-bottom {
+            padding-top: var(--space-8);
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+        }
+
+        .footer-copyright {
+            color: var(--muted-foreground);
+            font-size: var(--font-size-sm);
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: var(--space-6);
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom-links a {
+            color: var(--muted-foreground);
+            text-decoration: none;
+            font-size: var(--font-size-sm);
+            transition: color 150ms ease-in-out;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--foreground);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background-color: var(--accent);
+            color: var(--accent-foreground);
+            border-radius: 9999px;
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            margin-bottom: var(--space-4);
+        }
+
+        /* Color Palette */
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-4);
+            margin: var(--space-8) 0;
+        }
+
+        .color-card {
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .color-swatch {
+            height: 100px;
+            width: 100%;
+        }
+
+        .color-info {
+            padding: var(--space-4);
+        }
+
+        .color-name {
+            font-weight: 600;
+            margin-bottom: var(--space-2);
+        }
+
+        .color-values {
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: var(--font-size-xs);
+            color: var(--muted-foreground);
+        }
+
+        .color-values div {
+            margin-bottom: var(--space-1);
+        }
+
+        /* Typography Showcase */
+        .typography-showcase {
+            margin: var(--space-8) 0;
+        }
+
+        .font-example {
+            margin-bottom: var(--space-8);
+            padding: var(--space-6);
+            background-color: var(--muted);
+            border-radius: var(--radius);
+        }
+
+        .font-sample {
+            margin-bottom: var(--space-4);
+        }
+
+        .font-meta {
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: var(--font-size-sm);
+            color: var(--muted-foreground);
+        }
+
+        /* Component Showcase */
+        .component-showcase {
+            margin: var(--space-8) 0;
+        }
+
+        .component-example {
+            margin-bottom: var(--space-8);
+            padding: var(--space-6);
+            background-color: var(--muted);
+            border-radius: var(--radius);
+        }
+
+        .component-example h4 {
+            margin-bottom: var(--space-4);
+            font-weight: 600;
+        }
+
+        .component-demo {
+            padding: var(--space-6);
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            margin-bottom: var(--space-4);
+        }
+
+        .component-code {
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: var(--space-4);
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            font-size: var(--font-size-sm);
+            overflow-x: auto;
+        }
+
+        /* Responsive Mobile Adjustments */
+        @media (max-width: 768px) {
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: var(--space-6);
+            }
+
+            .py-24 {
+                padding-top: var(--space-16);
+                padding-bottom: var(--space-16);
+            }
+
+            .py-20 {
+                padding-top: var(--space-12);
+                padding-bottom: var(--space-12);
+            }
+
+            .py-16 {
+                padding-top: var(--space-10);
+                padding-bottom: var(--space-10);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">
+                <div class="logo-icon">DS</div>
+                <span>Design System</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-links">
+                <a href="#" class="nav-link active" onclick="showPage('home')">Home</a>
+                <a href="#" class="nav-link" onclick="showPage('docs')">Documentation</a>
+                <a href="#" class="nav-link" onclick="showPage('components')">Components</a>
+                <a href="#" class="nav-link" onclick="showPage('brand')">Brand</a>
+                <a href="#" class="nav-link" onclick="showPage('tokens')">Tokens</a>
+                <button class="btn btn-ghost">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                    GitHub
+                </button>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <div class="nav-toggle-icon"></div>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#" class="mobile-nav-link active" onclick="showPage('home'); closeMobileMenu()">Home</a>
+            <a href="#" class="mobile-nav-link" onclick="showPage('docs'); closeMobileMenu()">Documentation</a>
+            <a href="#" class="mobile-nav-link" onclick="showPage('components'); closeMobileMenu()">Components</a>
+            <a href="#" class="mobile-nav-link" onclick="showPage('brand'); closeMobileMenu()">Brand</a>
+            <a href="#" class="mobile-nav-link" onclick="showPage('tokens'); closeMobileMenu()">Tokens</a>
+        </div>
+    </div>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <section class="hero py-24">
+            <div class="container">
+                <div class="hero-content text-center">
+                    <div class="badge">
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        New v3.0 Release
+                    </div>
+                    
+                    <h1 class="hero-title">Beautiful Design System</h1>
+                    <p class="hero-subtitle">A modern, accessible, and customizable component library built with best practices for creating exceptional user experiences.</p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-lg" onclick="showPage('docs')">
+                            Get Started
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <button class="btn btn-secondary btn-lg">
+                            <svg class="icon" viewBox="0 0 24 24">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                            View on GitHub
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 container">
+            <div class="features-grid">
+                <div class="card feature-card">
+                    <div class="feature-icon">
+                        <svg class="icon-xl" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Design Tokens</h3>
+                    <p class="text-muted">Consistent design language with carefully crafted color palettes, typography scales, and spacing systems.</p>
+                </div>
+
+                <div class="card feature-card">
+                    <div class="feature-icon">
+                        <svg class="icon-xl" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4"/>
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Accessibility First</h3>
+                    <p class="text-muted">Built with WCAG 2.1 AA compliance in mind, ensuring inclusive experiences for all users.</p>
+                </div>
+
+                <div class="card feature-card">
+                    <div class="feature-icon">
+                        <svg class="icon-xl" viewBox="0 0 24 24">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Responsive</h3>
+                    <p class="text-muted">Mobile-first approach with fluid responsive design that works beautifully across all devices.</p>
+                </div>
+
+                <div class="card feature-card">
+                    <div class="feature-icon">
+                        <svg class="icon-xl" viewBox="0 0 24 24">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Performance</h3>
+                    <p class="text-muted">Optimized for speed with minimal bundle size and efficient rendering for smooth user interactions.</p>
+                </div>
+
+                <div class="card feature-card">
+                    <div class="feature-icon">
+                        <svg class="icon-xl" viewBox="0 0 24 24">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Developer Experience</h3>
+                    <p class="text-muted">Intuitive APIs, comprehensive documentation, and TypeScript support for efficient development.</p>
+                </div>
+
+                <div class="card feature-card">
+                    <div class="feature-icon">
+                        <svg class="icon-xl" viewBox="0 0 24 24">
+                            <polygon points="12,2 2,7 12,12 22,7"/>
+                            <polyline points="2,17 12,22 22,17"/>
+                            <polyline points="2,12 12,17 22,12"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Modular</h3>
+                    <p class="text-muted">Import only what you need with tree-shakable components and utilities for optimal bundle sizes.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Documentation Page -->
+    <div id="docs" class="page">
+        <div class="container">
+            <main class="content">
+                <h1>Design System Documentation</h1>
+                <p>Welcome to our comprehensive design system documentation. This guide will help you understand and implement our design principles, components, and best practices.</p>
+
+                <h2>Typography System</h2>
+                <p>Our typography system is built around system fonts, chosen for their excellent readability and modern aesthetic across all platforms.</p>
+
+                <h3>Font Stack</h3>
+                <div class="code-block">font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;</div>
+                <p>The primary typeface uses system fonts with careful fallbacks ensuring consistent rendering across all platforms.</p>
+
+                <h3>Font Weights</h3>
+                <ul>
+                    <li><strong>Light (300)</strong> - Used for large headings and decorative text</li>
+                    <li><strong>Regular (400)</strong> - Default body text weight</li>
+                    <li><strong>Medium (500)</strong> - Navigation links and secondary headings</li>
+                    <li><strong>Semibold (600)</strong> - Primary headings and emphasis</li>
+                    <li><strong>Bold (700)</strong> - Major headings and high emphasis text</li>
+                </ul>
+
+                <h2>Color System</h2>
+                <p>Our color palette is built around a semantic approach, using CSS custom properties for easy theming and consistency.</p>
+
+                <h3>Primary Colors</h3>
+                <ul>
+                    <li><strong>Background:</strong> #ffffff - Pure white for clean, minimal aesthetic</li>
+                    <li><strong>Foreground:</strong> #09090b - Near-black for high contrast text</li>
+                    <li><strong>Muted:</strong> #f4f4f5 - Light gray for subtle backgrounds</li>
+                    <li><strong>Border:</strong> #e4e4e7 - Medium gray for borders and dividers</li>
+                </ul>
+
+                <h2>Component Architecture</h2>
+                <p>Our components follow modern principles with utility-first CSS and consistent naming conventions. Each component is designed to be composable, accessible, and easy to customize.</p>
+
+                <h3>Design Principles</h3>
+                <ul>
+                    <li><strong>Consistency</strong> - Uniform spacing, colors, and typography across all components</li>
+                    <li><strong>Accessibility</strong> - WCAG 2.1 AA compliance with proper focus states and ARIA attributes</li>
+                    <li><strong>Flexibility</strong> - Components accept custom classes and can be easily themed</li>
+                    <li><strong>Performance</strong> - Minimal CSS with efficient selectors and no unused styles</li>
+                </ul>
+
+                <h2>Mobile Optimization</h2>
+                <p>The design system includes comprehensive mobile optimization with responsive navigation, touch-friendly interactions, and mobile-first design patterns.</p>
+
+                <h3>Mobile Features</h3>
+                <ul>
+                    <li><strong>Responsive Navigation</strong> - Collapsible hamburger menu on mobile devices</li>
+                    <li><strong>Touch Interactions</strong> - Larger touch targets and gesture-friendly components</li>
+                    <li><strong>Flexible Typography</strong> - Fluid font sizes using clamp() for optimal readability</li>
+                    <li><strong>Adaptive Layouts</strong> - Grid systems that stack vertically on smaller screens</li>
+                </ul>
+            </main>
+        </div>
+    </div>
+
+    <!-- Components Page -->
+    <div id="components" class="page">
+        <div class="container">
+            <main class="content">
+                <h1>Component Library</h1>
+                <p>A comprehensive collection of pre-built components for building modern user interfaces.</p>
+
+                <div class="component-showcase">
+                    <div class="component-example">
+                        <h4>Buttons</h4>
+                        <div class="component-demo">
+                            <div class="flex gap-4">
+                                <button class="btn btn-primary">Primary</button>
+                                <button class="btn btn-secondary">Secondary</button>
+                                <button class="btn btn-ghost">Ghost</button>
+                            </div>
+                        </div>
+                        <div class="component-code">&lt;button class="btn btn-primary"&gt;Primary&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="btn btn-ghost"&gt;Ghost&lt;/button&gt;</div>
+                    </div>
+
+                    <div class="component-example">
+                        <h4>Cards</h4>
+                        <div class="component-demo">
+                            <div class="card">
+                                <h4 class="mb-2">Card Title</h4>
+                                <p class="text-muted">Card content goes here. This is a basic card component with padding and border.</p>
+                            </div>
+                        </div>
+                        <div class="component-code">&lt;div class="card"&gt;
+  &lt;h4 class="mb-2"&gt;Card Title&lt;/h4&gt;
+  &lt;p class="text-muted"&gt;Card content goes here.&lt;/p&gt;
+&lt;/div&gt;</div>
+                    </div>
+
+                    <div class="component-example">
+                        <h4>Badges</h4>
+                        <div class="component-demo">
+                            <div class="badge">
+                                <svg class="icon" viewBox="0 0 24 24">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                                New Feature
+                            </div>
+                        </div>
+                        <div class="component-code">&lt;div class="badge"&gt;
+  &lt;svg class="icon" viewBox="0 0 24 24"&gt;...&lt;/svg&gt;
+  New Feature
+&lt;/div&gt;</div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Brand Page -->
+    <div id="brand" class="page">
+        <div class="container">
+            <main class="content">
+                <h1>Brand Identity</h1>
+                <p>Our brand identity reflects our commitment to clean, modern design and exceptional user experiences. Every element is carefully crafted to maintain consistency across all touchpoints.</p>
+
+                <h2>Logo & Symbol</h2>
+                <p>Our logo combines the "DS" symbol with clean typography to represent the systematic approach of our design philosophy.</p>
+
+                <div class="component-demo mb-8">
+                    <div class="flex items-center gap-4">
+                        <div class="logo-icon">DS</div>
+                        <span class="text-xl font-semibold">Design System</span>
+                    </div>
+                </div>
+
+                <h2>Color Palette</h2>
+                <p>Our color system is built around neutrals with carefully selected accent colors that work harmoniously in light mode.</p>
+
+                <div class="color-palette">
+                    <div class="color-card">
+                        <div class="color-swatch" style="background-color: #ffffff; border: 1px solid #e4e4e7;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Background</div>
+                            <div class="color-values">
+                                <div>HEX: #ffffff</div>
+                                <div>RGB: 255, 255, 255</div>
+                                <div>HSL: 0, 0%, 100%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="color-card">
+                        <div class="color-swatch" style="background-color: #09090b;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Foreground</div>
+                            <div class="color-values">
+                                <div>HEX: #09090b</div>
+                                <div>RGB: 9, 9, 11</div>
+                                <div>HSL: 240, 10%, 4%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="color-card">
+                        <div class="color-swatch" style="background-color: #f4f4f5;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Muted</div>
+                            <div class="color-values">
+                                <div>HEX: #f4f4f5</div>
+                                <div>RGB: 244, 244, 245</div>
+                                <div>HSL: 240, 5%, 96%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="color-card">
+                        <div class="color-swatch" style="background-color: #71717a;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Muted Foreground</div>
+                            <div class="color-values">
+                                <div>HEX: #71717a</div>
+                                <div>RGB: 113, 113, 122</div>
+                                <div>HSL: 240, 4%, 46%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="color-card">
+                        <div class="color-swatch" style="background-color: #e4e4e7;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Border</div>
+                            <div class="color-values">
+                                <div>HEX: #e4e4e7</div>
+                                <div>RGB: 228, 228, 231</div>
+                                <div>HSL: 240, 6%, 90%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="color-card">
+                        <div class="color-swatch" style="background-color: #ef4444;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Destructive</div>
+                            <div class="color-values">
+                                <div>HEX: #ef4444</div>
+                                <div>RGB: 239, 68, 68</div>
+                                <div>HSL: 0, 84%, 60%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Typography</h2>
+                <p>System fonts are our primary typeface, chosen for their excellent readability and modern aesthetic across all platforms and languages.</p>
+
+                <div class="typography-showcase">
+                    <div class="font-example">
+                        <div class="font-sample text-5xl font-bold" style="line-height: 1.2;">
+                            Heading 1
+                        </div>
+                        <div class="font-meta">
+                            System Font Bold • 48px • Line height: 1.2 • Letter spacing: -0.02em
+                        </div>
+                    </div>
+
+                    <div class="font-example">
+                        <div class="font-sample text-3xl font-semibold" style="line-height: 1.3;">
+                            Heading 2
+                        </div>
+                        <div class="font-meta">
+                            System Font Semibold • 30px • Line height: 1.3 • Letter spacing: -0.01em
+                        </div>
+                    </div>
+
+                    <div class="font-example">
+                        <div class="font-sample text-base font-normal" style="line-height: 1.6;">
+                            Body text provides clear and comfortable reading experience with optimal line spacing and character width for extended reading sessions.
+                        </div>
+                        <div class="font-meta">
+                            System Font Regular • 16px • Line height: 1.6 • Letter spacing: 0
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Tokens Page -->
+    <div id="tokens" class="page">
+        <div class="container">
+            <main class="content">
+                <h1>Design Tokens</h1>
+                <p>Design tokens are the visual design atoms of the design system. They are named entities that store visual design attributes.</p>
+
+                <h2>Color Tokens</h2>
+                <p>All color values are stored as CSS custom properties for easy theming and consistency.</p>
+
+                <div class="code-block">:root {
+  --background: #ffffff;
+  --foreground: #09090b;
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --border: #e4e4e7;
+  --primary: #18181b;
+  --primary-foreground: #fafafa;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+  --destructive: #ef4444;
+  --destructive-foreground: #fafafa;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --ring: #18181b;
+}</div>
+
+                <h2>Spacing Tokens</h2>
+                <p>Consistent spacing scale based on a 4px base unit for harmonious layouts.</p>
+
+                <div class="code-block">:root {
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6rem;    /* 96px */
+}</div>
+
+                <h2>Typography Tokens</h2>
+                <p>Fluid typography scale that adapts to screen sizes for optimal readability.</p>
+
+                <div class="code-block">:root {
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem;  /* 36px */
+  --font-size-5xl: 3rem;     /* 48px */
+  --font-size-6xl: 3.75rem;  /* 60px */
+}</div>
+
+                <h2>Shadow Tokens</h2>
+                <p>Elevation system using layered shadows for depth and hierarchy.</p>
+
+                <div class="code-block">:root {
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}</div>
+
+                <h2>Border Radius Tokens</h2>
+                <p>Consistent border radius values for cohesive component styling.</p>
+
+                <div class="code-block">:root {
+  --radius: 0.5rem; /* 8px */
+}</div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="logo-icon">DS</div>
+                        <span class="text-xl font-semibold">Design System</span>
+                    </div>
+                    <p class="text-muted text-sm">
+                        A modern, accessible, and customizable component library built with best practices for creating exceptional user experiences.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Documentation</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="showPage('docs')">Getting Started</a></li>
+                        <li><a href="#" onclick="showPage('components')">Components</a></li>
+                        <li><a href="#" onclick="showPage('brand')">Brand Guidelines</a></li>
+                        <li><a href="#" onclick="showPage('tokens')">Design Tokens</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">GitHub Repository</a></li>
+                        <li><a href="#">Figma Library</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Discord Server</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Stack Overflow</a></li>
+                        <li><a href="#">Contributors</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2025 Design System. All rights reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Accessibility</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation and Page Management
+        function showPage(pageId) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // Show selected page
+            document.getElementById(pageId).classList.add('active');
+
+            // Update navigation active states
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add active class to current page links
+            document.querySelectorAll(`[onclick*="${pageId}"]`).forEach(link => {
+                link.classList.add('active');
+            });
+
+            // Close mobile menu if open
+            closeMobileMenu();
+        }
+
+        // Mobile Menu Functions
+        function toggleMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+            const navToggle = document.querySelector('.nav-toggle');
+
+            const isOpen = mobileMenu.classList.contains('open');
+
+            if (isOpen) {
+                closeMobileMenu();
+            } else {
+                mobileMenu.classList.add('open');
+                mobileOverlay.classList.add('open');
+                navToggle.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeMobileMenu() {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileOverlay = document.querySelector('.mobile-menu-overlay');
+            const navToggle = document.querySelector('.nav-toggle');
+
+            mobileMenu.classList.remove('open');
+            mobileOverlay.classList.remove('open');
+            navToggle.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Button click animations
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Create ripple effect
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+
+                ripple.style.cssText = `
+                    position: absolute;
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 600ms linear;
+                    background-color: rgba(255, 255, 255, 0.3);
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    pointer-events: none;
+                `;
+
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add ripple keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.card, .feature-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Add hover effects to feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+            });
+
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Initialize entrance animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.opacity = '0';
+                heroContent.style.transform = 'translateY(30px)';
+                heroContent.style.transition = 'opacity 1s ease, transform 1s ease';
+
+                setTimeout(() => {
+                    heroContent.style.opacity = '1';
+                    heroContent.style.transform = 'translateY(0)';
+                }, 100);
+            }
+        });
+
+        // Handle window resize for responsive behavior
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const toggleButton = event.target.closest('.nav-toggle');
+
+            if (!mobileMenu.contains(event.target) && !toggleButton && mobileMenu.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>
