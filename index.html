@@ -1,90 +1,86 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light dark">
+    <title>Tommy Saunders - AI Revenue Operations Architect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="theme-color" content="#ffffff"> <meta name="color-scheme" content="light dark"> <title>Tommy Saunders - AI Revenue Operations Architect</title> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"> <style> /* Reset and Base Styles */ * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-        /* Light Mode Colors (Default) */
-        --background: #ffffff;
-        --foreground: #09090b;
-        --muted: #f4f4f5;
-        --muted-foreground: #71717a;
-        --border: #e4e4e7;
-        --input: #e4e4e7;
-        --primary: #18181b;
-        --primary-foreground: #fafafa;
-        --secondary: #f4f4f5;
-        --secondary-foreground: #18181b;
-        --accent: #f4f4f5;
-        --accent-foreground: #18181b;
-        --destructive: #ef4444;
-        --destructive-foreground: #fafafa;
-        --success: #22c55e;
-        --warning: #f59e0b;
-        --ring: #18181b;
+        :root {
+            /* Light Mode Colors (Default) */
+            --background: #ffffff;
+            --foreground: #09090b;
+            --muted: #f4f4f5;
+            --muted-foreground: #71717a;
+            --border: #e4e4e7;
+            --input: #e4e4e7;
+            --primary: #18181b;
+            --primary-foreground: #fafafa;
+            --secondary: #f4f4f5;
+            --secondary-foreground: #18181b;
+            --accent: #f4f4f5;
+            --accent-foreground: #18181b;
+            --destructive: #ef4444;
+            --destructive-foreground: #fafafa;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --ring: #18181b;
 
-        /* Mobile-First Spacing */
-        --space-1: 0.25rem;
-        --space-2: 0.5rem;
-        --space-3: 0.75rem;
-        --space-4: 1rem;
-        --space-5: 1.25rem;
-        --space-6: 1.5rem;
-        --space-8: 2rem;
-        --space-10: 2.5rem;
-        --space-12: 3rem;
-        --space-16: 4rem;
-        --space-20: 5rem;
-        --space-24: 6rem;
+            /* Mobile-First Spacing */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
 
-        /* Mobile-First Typography Scale */
-        --font-size-xs: 0.75rem;
-        --font-size-sm: 0.875rem;
-        --font-size-base: 1rem;
-        --font-size-lg: 1.125rem;
-        --font-size-xl: 1.25rem;
-        --font-size-2xl: 1.5rem;
-        --font-size-3xl: 1.875rem;
-        --font-size-4xl: 2.25rem;
-        --font-size-5xl: 3rem;
-        --font-size-6xl: 3.75rem;
+            /* Mobile-First Typography Scale */
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
+            --font-size-5xl: 3rem;
+            --font-size-6xl: 3.75rem;
 
-        /* Mobile-First Layout */
-        --container-padding: 1rem;
-        --border-radius: 0.5rem;
-        --header-height: 60px;
+            /* Mobile-First Layout */
+            --container-padding: 1rem;
+            --border-radius: 0.5rem;
+            --header-height: 60px;
 
-        /* Touch-Friendly Sizes */
-        --touch-target: 44px;
-        --button-height: 44px;
-        --input-height: 44px;
+            /* Touch-Friendly Sizes */
+            --touch-target: 44px;
+            --button-height: 44px;
+            --input-height: 44px;
 
-        /* Mobile-First Shadows */
-        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-        --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
+            /* Mobile-First Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
 
-    /* Dark Mode Implementation */
-    [data-theme="dark"] {
-        --background: #09090b;
-        --foreground: #fafafa;
-        --muted: #18181b;
-        --muted-foreground: #a1a1aa;
-        --border: #27272a;
-        --input: #27272a;
-        --primary: #fafafa;
-        --primary-foreground: #18181b;
-        --secondary: #27272a;
-        --secondary-foreground: #fafafa;
-        --accent: #27272a;
-        --accent-foreground: #fafafa;
-        --ring: #d4d4d8;
-    }
-
-    /* System preference detection */
-    @media (prefers-color-scheme: dark) {
-        :root:not([data-theme]) {
+        /* Dark Mode Implementation */
+        [data-theme="dark"] {
             --background: #09090b;
             --foreground: #fafafa;
             --muted: #18181b;
@@ -99,1848 +95,1969 @@
             --accent-foreground: #fafafa;
             --ring: #d4d4d8;
         }
-    }
 
-    /* Mobile-First Base Styles */
-    body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-        line-height: 1.6;
-        color: var(--foreground);
-        background-color: var(--background);
-        font-feature-settings: 'cv11', 'ss01';
-        font-variation-settings: 'opsz' 32;
-        overflow-x: hidden;
-        
-        /* Mobile optimizations */
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-rendering: optimizeLegibility;
-        
-        /* Prevent text size adjustment on mobile */
-        -webkit-text-size-adjust: 100%;
-        -moz-text-size-adjust: 100%;
-        text-size-adjust: 100%;
-        
-        /* Smooth transitions for theme changes */
-        transition: color 0.3s ease, background-color 0.3s ease;
-    }
-
-    /* Mobile-friendly selection */
-    ::selection {
-        background-color: var(--primary);
-        color: var(--primary-foreground);
-    }
-
-    /* Remove tap highlights on mobile */
-    button, a {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-touch-callout: none;
-    }
-
-    /* Container System */
-    .container {
-        width: 100%;
-        margin: 0 auto;
-        padding: 0 var(--container-padding);
-        max-width: 100%;
-    }
-
-    /* Typography Classes */
-    .text-xs { font-size: var(--font-size-xs); }
-    .text-sm { font-size: var(--font-size-sm); }
-    .text-base { font-size: var(--font-size-base); }
-    .text-lg { font-size: var(--font-size-lg); }
-    .text-xl { font-size: var(--font-size-xl); }
-    .text-2xl { font-size: var(--font-size-2xl); }
-    .text-3xl { font-size: var(--font-size-3xl); }
-    .text-4xl { font-size: var(--font-size-4xl); }
-    .text-5xl { font-size: var(--font-size-5xl); }
-    .text-6xl { font-size: var(--font-size-6xl); }
-
-    .font-light { font-weight: 300; }
-    .font-normal { font-weight: 400; }
-    .font-medium { font-weight: 500; }
-    .font-semibold { font-weight: 600; }
-    .font-bold { font-weight: 700; }
-
-    .text-muted { color: var(--muted-foreground); }
-    .text-center { text-align: center; }
-
-    /* Layout Utilities */
-    .flex { display: flex; }
-    .grid { display: grid; }
-    .hidden { display: none; }
-    .items-center { align-items: center; }
-    .justify-center { justify-content: center; }
-    .justify-between { justify-content: space-between; }
-    .flex-col { flex-direction: column; }
-    .gap-1 { gap: var(--space-1); }
-    .gap-2 { gap: var(--space-2); }
-    .gap-3 { gap: var(--space-3); }
-    .gap-4 { gap: var(--space-4); }
-    .gap-6 { gap: var(--space-6); }
-    .gap-8 { gap: var(--space-8); }
-
-    /* Grid System */
-    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-    .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .grid-auto { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-
-    /* Spacing */
-    .p-1 { padding: var(--space-1); }
-    .p-2 { padding: var(--space-2); }
-    .p-3 { padding: var(--space-3); }
-    .p-4 { padding: var(--space-4); }
-    .p-6 { padding: var(--space-6); }
-    .p-8 { padding: var(--space-8); }
-
-    .py-2 { padding-top: var(--space-2); padding-bottom: var(--space-2); }
-    .py-3 { padding-top: var(--space-3); padding-bottom: var(--space-3); }
-    .py-4 { padding-top: var(--space-4); padding-bottom: var(--space-4); }
-    .py-6 { padding-top: var(--space-6); padding-bottom: var(--space-6); }
-    .py-8 { padding-top: var(--space-8); padding-bottom: var(--space-8); }
-    .py-12 { padding-top: var(--space-12); padding-bottom: var(--space-12); }
-    .py-16 { padding-top: var(--space-16); padding-bottom: var(--space-16); }
-    .py-20 { padding-top: var(--space-20); padding-bottom: var(--space-20); }
-    .py-24 { padding-top: var(--space-24); padding-bottom: var(--space-24); }
-
-    .px-2 { padding-left: var(--space-2); padding-right: var(--space-2); }
-    .px-3 { padding-left: var(--space-3); padding-right: var(--space-3); }
-    .px-4 { padding-left: var(--space-4); padding-right: var(--space-4); }
-    .px-6 { padding-left: var(--space-6); padding-right: var(--space-6); }
-
-    .m-0 { margin: 0; }
-    .mb-2 { margin-bottom: var(--space-2); }
-    .mb-3 { margin-bottom: var(--space-3); }
-    .mb-4 { margin-bottom: var(--space-4); }
-    .mb-6 { margin-bottom: var(--space-6); }
-    .mb-8 { margin-bottom: var(--space-8); }
-    .mb-12 { margin-bottom: var(--space-12); }
-    .mb-16 { margin-bottom: var(--space-16); }
-    .mt-4 { margin-top: var(--space-4); }
-    .mt-8 { margin-top: var(--space-8); }
-    .mt-12 { margin-top: var(--space-12); }
-    .mt-16 { margin-top: var(--space-16); }
-    .mx-auto { margin-left: auto; margin-right: auto; }
-
-    /* Sizing */
-    .w-full { width: 100%; }
-    .h-full { height: 100%; }
-    .max-w-2xl { max-width: 42rem; }
-    .max-w-4xl { max-width: 56rem; }
-    .max-w-6xl { max-width: 72rem; }
-
-    /* Position */
-    .relative { position: relative; }
-    .sticky { position: sticky; }
-    .fixed { position: fixed; }
-    .top-0 { top: 0; }
-    .right-0 { right: 0; }
-    .bottom-0 { bottom: 0; }
-    .left-0 { left: 0; }
-    .z-10 { z-index: 10; }
-    .z-50 { z-index: 50; }
-    .z-100 { z-index: 100; }
-
-    /* Overflow */
-    .overflow-hidden { overflow: hidden; }
-    .overflow-y-auto { overflow-y: auto; }
-
-    /* Opacity */
-    .opacity-0 { opacity: 0; }
-    .opacity-50 { opacity: 0.5; }
-    .opacity-90 { opacity: 0.9; }
-    .opacity-100 { opacity: 1; }
-
-    /* Transitions */
-    .transition-all { transition: all 150ms ease-in-out; }
-    .transition-colors { transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out; }
-    .transition-transform { transition: transform 150ms ease-in-out; }
-
-    /* Shadows */
-    .shadow-sm { box-shadow: var(--shadow-sm); }
-    .shadow { box-shadow: var(--shadow); }
-    .shadow-md { box-shadow: var(--shadow-md); }
-    .shadow-lg { box-shadow: var(--shadow-lg); }
-
-    /* Hover States */
-    .hover\:shadow-md:hover { box-shadow: var(--shadow-md); }
-    .hover\:shadow-lg:hover { box-shadow: var(--shadow-lg); }
-    .hover\:scale-105:hover { transform: scale(1.05); }
-    .hover\:-translate-y-2:hover { transform: translateY(-0.5rem); }
-    .hover\:bg-muted:hover { background-color: var(--muted); }
-    .hover\:bg-primary:hover { background-color: var(--primary); }
-    .hover\:text-foreground:hover { color: var(--foreground); }
-    .hover\:text-primary-foreground:hover { color: var(--primary-foreground); }
-    .hover\:opacity-90:hover { opacity: 0.9; }
-
-    /* Border Radius */
-    .rounded { border-radius: var(--border-radius); }
-    .rounded-lg { border-radius: calc(var(--border-radius) * 1.5); }
-    .rounded-full { border-radius: 9999px; }
-
-    /* Header */
-    .header {
-        position: sticky;
-        top: 0;
-        height: var(--header-height);
-        background-color: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-bottom: 1px solid var(--border);
-        z-index: 100;
-        transition: background-color 0.3s ease, border-color 0.3s ease;
-    }
-
-    [data-theme="dark"] .header {
-        background-color: rgba(9, 9, 11, 0.95);
-    }
-
-    .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-        padding: 0 var(--container-padding);
-    }
-
-    /* Logo */
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: var(--space-2);
-        font-weight: 600;
-        font-size: var(--font-size-lg);
-        color: var(--foreground);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .logo-icon {
-        width: 32px;
-        height: 32px;
-        background: linear-gradient(135deg, var(--primary) 0%, var(--muted-foreground) 100%);
-        border-radius: var(--border-radius);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--primary-foreground);
-        font-weight: bold;
-        font-size: var(--font-size-base);
-        transition: transform 0.2s ease;
-    }
-
-    .logo:hover .logo-icon {
-        transform: scale(1.05);
-    }
-
-    /* Navigation Links - Hidden on mobile */
-    .nav-links {
-        display: none;
-    }
-
-    /* Mobile menu button */
-    .nav-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: var(--button-height);
-        height: var(--button-height);
-        background: none;
-        border: none;
-        color: var(--foreground);
-        cursor: pointer;
-        border-radius: var(--border-radius);
-        transition: background-color 0.2s ease;
-    }
-
-    .nav-toggle:hover {
-        background-color: var(--muted);
-    }
-
-    /* Hamburger icon */
-    .nav-toggle-icon {
-        position: relative;
-        width: 20px;
-        height: 2px;
-        background-color: currentColor;
-        transition: all 0.3s ease;
-    }
-
-    .nav-toggle-icon::before,
-    .nav-toggle-icon::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: currentColor;
-        transition: all 0.3s ease;
-    }
-
-    .nav-toggle-icon::before {
-        top: -6px;
-    }
-
-    .nav-toggle-icon::after {
-        bottom: -6px;
-    }
-
-    /* Active hamburger animation */
-    .nav-toggle.active .nav-toggle-icon {
-        background-color: transparent;
-    }
-
-    .nav-toggle.active .nav-toggle-icon::before {
-        top: 0;
-        transform: rotate(45deg);
-    }
-
-    .nav-toggle.active .nav-toggle-icon::after {
-        bottom: 0;
-        transform: rotate(-45deg);
-    }
-
-    /* Mobile menu overlay */
-    .nav-overlay {
-        position: fixed;
-        top: var(--header-height);
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 99;
-    }
-
-    .nav-overlay.active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    /* Mobile menu */
-    .nav-menu {
-        position: fixed;
-        top: var(--header-height);
-        right: -300px;
-        width: 280px;
-        height: calc(100vh - var(--header-height));
-        background-color: var(--background);
-        border-left: 1px solid var(--border);
-        transition: right 0.3s ease;
-        overflow-y: auto;
-        z-index: 100;
-    }
-
-    .nav-menu.active {
-        right: 0;
-    }
-
-    .nav-menu-content {
-        padding: var(--space-6) var(--space-4);
-    }
-
-    .nav-link {
-        display: block;
-        padding: var(--space-3) var(--space-4);
-        color: var(--muted-foreground);
-        text-decoration: none;
-        font-weight: 500;
-        font-size: var(--font-size-base);
-        border-radius: var(--border-radius);
-        transition: all 0.2s ease;
-        margin-bottom: var(--space-2);
-        min-height: var(--touch-target);
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-link:hover,
-    .nav-link.active {
-        color: var(--foreground);
-        background-color: var(--muted);
-    }
-
-    /* Theme Toggle */
-    .theme-toggle {
-        position: fixed;
-        bottom: var(--space-4);
-        right: var(--space-4);
-        z-index: 1000;
-        width: 56px;
-        height: 56px;
-        border-radius: 50%;
-        background-color: var(--primary);
-        color: var(--primary-foreground);
-        border: none;
-        cursor: pointer;
-        box-shadow: var(--shadow-lg);
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        touch-action: manipulation;
-    }
-
-    .theme-toggle:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-xl);
-    }
-
-    .theme-toggle:active {
-        transform: translateY(0);
-        box-shadow: var(--shadow-lg);
-    }
-
-    .theme-toggle-icon {
-        width: 24px;
-        height: 24px;
-        transition: all 0.3s ease;
-    }
-
-    /* Icon states */
-    .theme-toggle .light-icon {
-        display: block;
-    }
-
-    .theme-toggle .dark-icon {
-        display: none;
-    }
-
-    [data-theme="dark"] .theme-toggle .light-icon {
-        display: none;
-    }
-
-    [data-theme="dark"] .theme-toggle .dark-icon {
-        display: block;
-    }
-
-    /* Buttons */
-    .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: var(--space-2);
-        min-height: var(--button-height);
-        padding: var(--space-3) var(--space-4);
-        font-size: var(--font-size-base);
-        font-weight: 500;
-        line-height: 1.2;
-        text-decoration: none;
-        text-align: center;
-        border: none;
-        border-radius: var(--border-radius);
-        cursor: pointer;
-        user-select: none;
-        transition: all 0.2s ease-in-out;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .btn-primary {
-        background-color: var(--primary);
-        color: var(--primary-foreground);
-        box-shadow: var(--shadow-sm);
-    }
-
-    .btn-primary:hover {
-        opacity: 0.9;
-        box-shadow: var(--shadow-md);
-    }
-
-    .btn-secondary {
-        background-color: var(--secondary);
-        color: var(--secondary-foreground);
-        border: 1px solid var(--border);
-    }
-
-    .btn-secondary:hover {
-        background-color: var(--accent);
-        border-color: var(--foreground);
-    }
-
-    .btn-ghost {
-        background-color: transparent;
-        color: var(--muted-foreground);
-        border: 1px solid transparent;
-    }
-
-    .btn-ghost:hover {
-        background-color: var(--muted);
-        color: var(--foreground);
-    }
-
-    .btn-sm {
-        min-height: 36px;
-        padding: var(--space-2) var(--space-3);
-        font-size: var(--font-size-sm);
-    }
-
-    .btn-lg {
-        min-height: 52px;
-        padding: var(--space-4) var(--space-6);
-        font-size: var(--font-size-lg);
-    }
-
-    /* Cards */
-    .card {
-        background-color: var(--background);
-        border: 1px solid var(--border);
-        border-radius: var(--border-radius);
-        padding: var(--space-4);
-        box-shadow: var(--shadow-sm);
-        transition: all 0.2s ease-in-out;
-        width: 100%;
-    }
-
-    .card:hover {
-        box-shadow: var(--shadow-md);
-    }
-
-    .card-interactive {
-        cursor: pointer;
-    }
-
-    .card-interactive:hover {
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-lg);
-    }
-
-    /* Hero Section */
-    .hero {
-        background: linear-gradient(135deg, var(--background) 0%, var(--muted) 100%);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .hero::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0);
-        background-size: 30px 30px;
-        pointer-events: none;
-    }
-
-    [data-theme="dark"] .hero::before {
-        background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
-    }
-
-    .hero-content {
-        position: relative;
-        z-index: 1;
-    }
-
-    .hero-title {
-        font-size: var(--font-size-4xl);
-        font-weight: 700;
-        line-height: 1.1;
-        margin-bottom: var(--space-6);
-        word-wrap: break-word;
-        hyphens: auto;
-        background: linear-gradient(135deg, var(--primary) 0%, var(--muted-foreground) 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .hero-subtitle {
-        font-size: var(--font-size-lg);
-        color: var(--muted-foreground);
-        margin-bottom: var(--space-2);
-        max-width: 100%;
-        line-height: 1.6;
-    }
-
-    .hero-tagline {
-        font-size: var(--font-size-base);
-        color: var(--foreground);
-        font-weight: 500;
-        margin-bottom: var(--space-8);
-    }
-
-    /* Badge */
-    .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-2);
-        padding: var(--space-2) var(--space-4);
-        background-color: var(--primary);
-        color: var(--primary-foreground);
-        border-radius: 9999px;
-        font-size: var(--font-size-sm);
-        font-weight: 600;
-        margin-bottom: var(--space-6);
-    }
-
-    .star-icon {
-        width: 1rem;
-        height: 1rem;
-        fill: currentColor;
-    }
-
-    /* Quick Navigation Cards */
-    .quick-nav {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: var(--space-4);
-        margin-bottom: var(--space-8);
-    }
-
-    .nav-card {
-        background: var(--background);
-        border: 1px solid var(--border);
-        border-radius: var(--border-radius);
-        padding: var(--space-6);
-        transition: all 0.2s ease;
-        cursor: pointer;
-        text-decoration: none;
-        color: inherit;
-        display: block;
-    }
-
-    .nav-card:hover {
-        box-shadow: var(--shadow-md);
-        border-color: var(--primary);
-        transform: translateY(-2px);
-    }
-
-    .nav-card-header {
-        display: flex;
-        align-items: center;
-        gap: var(--space-4);
-        margin-bottom: var(--space-4);
-    }
-
-    .nav-card-icon {
-        background: var(--muted);
-        padding: var(--space-3);
-        border-radius: var(--border-radius);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 48px;
-        height: 48px;
-        flex-shrink: 0;
-        transition: all 0.2s ease;
-        font-size: var(--font-size-xl);
-    }
-
-    .nav-card:hover .nav-card-icon {
-        background: var(--primary);
-        color: var(--primary-foreground);
-    }
-
-    .nav-card h2, .nav-card h3 {
-        margin: 0;
-        font-size: var(--font-size-xl);
-        font-weight: 600;
-    }
-
-    .nav-card p {
-        margin: 0;
-        color: var(--muted-foreground);
-        font-size: var(--font-size-base);
-        line-height: 1.5;
-    }
-
-    .nav-card-cta {
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-2);
-        font-size: var(--font-size-sm);
-        font-weight: 500;
-        color: var(--primary);
-        transition: gap 0.2s ease;
-        margin-top: var(--space-3);
-    }
-
-    .nav-card:hover .nav-card-cta {
-        gap: var(--space-3);
-    }
-
-    /* Section Styles */
-    .section-header {
-        text-align: center;
-        margin-bottom: var(--space-16);
-    }
-
-    .section-title {
-        font-size: var(--font-size-3xl);
-        font-weight: 700;
-        margin-bottom: var(--space-4);
-        background: linear-gradient(135deg, var(--primary) 0%, var(--muted-foreground) 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .section-subtitle {
-        font-size: var(--font-size-base);
-        color: var(--muted-foreground);
-        max-width: 600px;
-        margin: 0 auto;
-        line-height: 1.6;
-    }
-
-    /* Priority Section */
-    .priority-section {
-        background-color: var(--muted);
-        border-radius: var(--border-radius);
-        padding: var(--space-6);
-        margin-bottom: var(--space-12);
-    }
-
-    .priority-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-2);
-        padding: var(--space-2) var(--space-4);
-        background-color: var(--primary);
-        color: var(--primary-foreground);
-        border-radius: 9999px;
-        font-size: var(--font-size-sm);
-        font-weight: 600;
-        margin-bottom: var(--space-6);
-    }
-
-    /* Research Grid */
-    .research-grid {
-        display: grid;
-        gap: var(--space-6);
-        grid-template-columns: 1fr;
-    }
-
-    /* Research Card */
-    .research-card {
-        background-color: var(--background);
-        border: 1px solid var(--border);
-        border-radius: var(--border-radius);
-        padding: var(--space-6);
-        box-shadow: var(--shadow-sm);
-        transition: all 0.3s ease-in-out;
-    }
-
-    .research-card:hover {
-        box-shadow: var(--shadow-md);
-        transform: translateY(-2px);
-    }
-
-    .research-card-header {
-        display: flex;
-        align-items: center;
-        gap: var(--space-3);
-        margin-bottom: var(--space-4);
-    }
-
-    .research-icon {
-        width: 2.5rem;
-        height: 2.5rem;
-        background: linear-gradient(135deg, var(--primary) 0%, var(--muted-foreground) 100%);
-        border-radius: var(--border-radius);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--primary-foreground);
-        font-weight: bold;
-        font-size: var(--font-size-base);
-        flex-shrink: 0;
-    }
-
-    .research-title {
-        font-size: var(--font-size-xl);
-        font-weight: 600;
-        color: var(--foreground);
-        margin: 0;
-    }
-
-    .research-description {
-        font-size: var(--font-size-base);
-        color: var(--muted-foreground);
-        line-height: 1.6;
-        margin-bottom: var(--space-4);
-    }
-
-    /* Tag Cloud */
-    .tag-cloud {
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--space-2);
-        margin-top: var(--space-4);
-    }
-
-    .tag {
-        display: inline-flex;
-        align-items: center;
-        padding: var(--space-1) var(--space-2);
-        background-color: var(--muted);
-        border: 1px solid var(--border);
-        border-radius: var(--border-radius);
-        font-size: var(--font-size-xs);
-        font-weight: 400;
-        color: var(--muted-foreground);
-        text-decoration: none;
-        transition: all 0.2s ease-in-out;
-        white-space: nowrap;
-    }
-
-    .tag:hover {
-        background-color: var(--primary);
-        color: var(--primary-foreground);
-        border-color: var(--primary);
-    }
-
-    /* Contact Section */
-    .contact-section {
-        background: linear-gradient(135deg, var(--primary) 0%, #27272a 100%);
-        color: var(--primary-foreground);
-        border-radius: var(--border-radius);
-        padding: var(--space-6);
-        text-align: center;
-        margin-top: var(--space-16);
-    }
-
-    .contact-title {
-        font-size: var(--font-size-2xl);
-        font-weight: 600;
-        margin-bottom: var(--space-4);
-        color: var(--primary-foreground);
-    }
-
-    .contact-subtitle {
-        font-size: var(--font-size-base);
-        color: rgba(250, 250, 250, 0.8);
-        margin-bottom: var(--space-6);
-    }
-
-    .contact-links {
-        display: flex;
-        flex-direction: column;
-        gap: var(--space-4);
-        align-items: center;
-    }
-
-    .contact-link {
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-2);
-        padding: var(--space-3) var(--space-4);
-        background-color: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: var(--border-radius);
-        color: var(--primary-foreground);
-        text-decoration: none;
-        font-weight: 500;
-        font-size: var(--font-size-sm);
-        transition: all 0.2s ease;
-    }
-
-    .contact-link:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-        border-color: rgba(255, 255, 255, 0.4);
-        transform: translateY(-2px);
-    }
-
-    .contact-icon {
-        width: 1rem;
-        height: 1rem;
-        fill: currentColor;
-    }
-
-    /* Pure CSS Icons */
-    .icon {
-        width: 1rem;
-        height: 1rem;
-        display: inline-block;
-        flex-shrink: 0;
-    }
-
-    .icon-lg {
-        width: 1.25rem;
-        height: 1.25rem;
-    }
-
-    .icon-xl {
-        width: 1.5rem;
-        height: 1.5rem;
-    }
-
-    .icon-2xl {
-        width: 2rem;
-        height: 2rem;
-    }
-
-    /* SVG Icons */
-    .icon svg {
-        width: 100%;
-        height: 100%;
-        fill: currentColor;
-        stroke: currentColor;
-        stroke-width: 0;
-    }
-
-    /* Responsive Design */
-    @media (min-width: 640px) {
-        .container {
-            max-width: 640px;
-            padding: 0 1.5rem;
-        }
-
-        .btn {
-            width: auto;
-            max-width: none;
-        }
-
-        .hero-title {
-            font-size: var(--font-size-5xl);
-        }
-
-        .hero-subtitle {
-            font-size: var(--font-size-xl);
-            max-width: 800px;
-            margin: 0 auto var(--space-2);
-        }
-
-        .hero-tagline {
-            font-size: var(--font-size-lg);
-        }
-
-        .quick-nav {
-            grid-template-columns: repeat(2, 1fr);
-            gap: var(--space-6);
-        }
-
-        .research-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: var(--space-8);
-        }
-
-        .contact-links {
-            flex-direction: row;
-            justify-content: center;
-            gap: var(--space-6);
-        }
-
-        .card {
-            padding: var(--space-6);
-        }
-    }
-
-    @media (min-width: 768px) {
-        .container {
-            max-width: 768px;
-            padding: 0 2rem;
-        }
-
-        .nav-toggle {
-            display: none;
-        }
-
-        .nav-overlay,
-        .nav-menu {
-            display: none;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
-        }
-
-        .nav-link {
-            display: inline-block;
-            padding: var(--space-2) var(--space-3);
-            margin-bottom: 0;
-            font-size: var(--font-size-sm);
-            min-height: auto;
-        }
-
-        .section-title {
-            font-size: var(--font-size-4xl);
-        }
-
-        .section-subtitle {
-            font-size: var(--font-size-lg);
-        }
-
-        .theme-toggle {
-            bottom: var(--space-8);
-            right: var(--space-8);
-        }
-    }
-
-    @media (min-width: 1024px) {
-        .container {
-            max-width: 1024px;
-        }
-
-        .hero-title {
-            font-size: var(--font-size-6xl);
-        }
-
-        .nav {
-            padding: 0 var(--space-8);
-        }
-
-        .nav-links {
-            gap: var(--space-4);
-        }
-
-        .research-grid {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: var(--space-10);
-        }
-
-        .btn:hover {
-            transform: translateY(-1px);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        .card-interactive:hover {
-            transform: translateY(-4px);
-        }
-    }
-
-    @media (min-width: 1280px) {
-        .container {
-            max-width: 1200px;
-        }
-    }
-
-    /* Mobile specific adjustments */
-    @media (max-width: 640px) {
-        .hero {
-            padding: var(--space-12) 0 var(--space-16);
-        }
-
-        .hero-title {
-            font-size: var(--font-size-3xl);
-        }
-
-        .nav-card-header {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .research-card-header {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .research-icon {
-            margin: 0 auto;
-        }
-
-        .priority-section,
-        .contact-section {
-            padding: var(--space-6);
-        }
-
-        .contact-title {
-            font-size: var(--font-size-xl);
-        }
-    }
-
-    /* Focus States */
-    .btn:focus,
-    .nav-link:focus,
-    .nav-toggle:focus,
-    .theme-toggle:focus,
-    .nav-card:focus,
-    .contact-link:focus,
-    .tag:focus {
-        outline: 2px solid var(--ring);
-        outline-offset: 2px;
-    }
-
-    /* Reduced Motion */
-    @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-        }
-    }
-
-    /* High Contrast */
-    @media (prefers-contrast: high) {
-        :root {
-            --border: #000000;
-            --muted-foreground: #404040;
-        }
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .animate-fadeInUp {
-        animation: fadeInUp 0.6s ease-out;
-    }
-
-    /* Scrollbar Styling */
-    ::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background-color: var(--muted);
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background-color: var(--muted-foreground);
-        border-radius: var(--border-radius);
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background-color: var(--foreground);
-    }
-</style>
-</head> <body> <!-- Header --> <header class="header"> <nav class="nav"> <a href="#" class="logo"> <div class="logo-icon">TS</div> <span>Tommy Saunders</span> </a>
-        <!-- Desktop Navigation -->
-        <div class="nav-links">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#portfolio" class="nav-link">Portfolio</a>
-            <a href="#contact" class="nav-link">Contact</a>
-            <button class="btn btn-ghost btn-sm">
-                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                </svg>
-                Projects
-            </button>
-        </div>
-        
-        <!-- Mobile Menu Button -->
-        <button class="nav-toggle" onclick="toggleMobileMenu()">
-            <div class="nav-toggle-icon"></div>
-        </button>
-    </nav>
-    
-    <!-- Mobile Menu Overlay -->
-    <div class="nav-overlay" onclick="toggleMobileMenu()"></div>
-    
-    <!-- Mobile Menu -->
-    <div class="nav-menu">
-        <div class="nav-menu-content">
-            <a href="#about" class="nav-link" onclick="toggleMobileMenu()">About</a>
-            <a href="#portfolio" class="nav-link" onclick="toggleMobileMenu()">Portfolio</a>
-            <a href="#market-intelligence" class="nav-link" onclick="toggleMobileMenu()">Market Intelligence</a>
-            <a href="#resources" class="nav-link" onclick="toggleMobileMenu()">Resources</a>
-            <a href="#projects" class="nav-link" onclick="toggleMobileMenu()">Projects</a>
-            <a href="#contact" class="nav-link" onclick="toggleMobileMenu()">Contact</a>
-        </div>
-    </div>
-</header>
-
-<!-- Theme Toggle Button -->
-<button class="theme-toggle" onclick="toggleTheme()">
-    <svg class="theme-toggle-icon light-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="12" cy="12" r="5"/>
-        <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-    </svg>
-    <svg class="theme-toggle-icon dark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-    </svg>
-</button>
-
-<!-- Hero Section -->
-<section class="hero py-24">
-    <div class="container">
-        <div class="hero-content animate-fadeInUp text-center">
-            <div class="badge">
-                <svg class="star-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                AI Revenue Operations Expert
-            </div>
-            <h1 class="hero-title">
-                AI Revenue Operations Architect
-            </h1>
-            <p class="hero-subtitle">
-                I Help Organizations Create Intelligence — That's Not Artificial
-            </p>
-            <p class="hero-tagline">
-                guiding through the chaos → with real solutions → that make an immediate impact… today.
-            </p>
-        </div>
-    </div>
-</section>
-
-<!-- Main Navigation Section -->
-<section class="py-20">
-    <div class="container">
-        <div class="quick-nav mb-16">
-            <!-- Home -->
-            <a href="#home" class="nav-card">
-                <div class="nav-card-header">
-                    <div class="nav-card-icon">🏠</div>
-                    <h2 class="nav-card-title">Home</h2>
-                </div>
-                <p class="nav-card-description">
-                    I provide end-to-end expertise—helping organizations strategize, develop, implement, optimize, and scale their AI-powered MarTech infrastructure and operations bridge the gap between technical possibilities and business outcomes.
-                </p>
-                <div class="nav-card-cta">
-                    Visit Home
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14"/>
-                        <path d="M12 5l7 7-7 7"/>
-                    </svg>
-                </div>
-            </a>
-
-            <!-- About -->
-            <a href="#about" class="nav-card">
-                <div class="nav-card-header">
-                    <div class="nav-card-icon">👤</div>
-                    <h2 class="nav-card-title">About</h2>
-                </div>
-                <p class="nav-card-description">
-                    Strategic Leadership in AI. I design intelligent systems that transform how businesses operate and grow. As an AI Revenue Operations Architect, I specialize in designing and implementing sophisticated AI systems that drive measurable business growth.
-                </p>
-                <div class="nav-card-cta">
-                    Learn More
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14"/>
-                        <path d="M12 5l7 7-7 7"/>
-                    </svg>
-                </div>
-            </a>
-
-            <!-- Portfolio -->
-            <a href="#portfolio" class="nav-card">
-                <div class="nav-card-header">
-                    <div class="nav-card-icon">💼</div>
-                    <h2 class="nav-card-title">Portfolio</h2>
-                </div>
-                <p class="nav-card-description">
-                    Explore my complete portfolio of AI implementations, revenue operations transformations, and strategic consulting engagements. Case studies demonstrating measurable business impact and ROI.
-                </p>
-                <div class="nav-card-cta">
-                    View Portfolio
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14"/>
-                        <path d="M12 5l7 7-7 7"/>
-                    </svg>
-                </div>
-            </a>
-
-            <!-- Market Intelligence -->
-            <a href="#market-intelligence" class="nav-card">
-                <div class="nav-card-header">
-                    <div class="nav-card-icon">📊</div>
-                    <h2 class="nav-card-title">Market Intelligence</h2>
-                </div>
-                <p class="nav-card-description">
-                    Strategic insights and analysis on AI market trends, competitive intelligence, and emerging opportunities in the AI-powered business landscape. Data-driven market research and forecasting.
-                </p>
-                <div class="nav-card-cta">
-                    View Intelligence
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14"/>
-                        <path d="M12 5l7 7-7 7"/>
-                    </svg>
-                </div>
-            </a>
-
-            <!-- Resources -->
-            <a href="#resources" class="nav-card">
-                <div class="nav-card-header">
-                    <div class="nav-card-icon">📚</div>
-                    <h2 class="nav-card-title">Resources</h2>
-                </div>
-                <p class="nav-card-description">
-                    Comprehensive collection of tools, templates, frameworks, and guides for implementing AI solutions. Free resources for revenue operations, prompt engineering, and system architecture.
-                </p>
-                <div class="nav-card-cta">
-                    Browse Resources
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14"/>
-                        <path d="M12 5l7 7-7 7"/>
-                    </svg>
-                </div>
-            </a>
-
-            <!-- Projects -->
-            <a href="#projects" class="nav-card">
-                <div class="nav-card-header">
-                    <div class="nav-card-icon">🚀</div>
-                    <h2 class="nav-card-title">Projects</h2>
-                </div>
-                <p class="nav-card-description">
-                    Browse the complete collection of AI implementations, revenue operations transformations, and innovative solutions. Each project demonstrates measurable business impact and strategic value.
-                </p>
-                <div class="nav-card-cta">
-                    View All Projects
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14"/>
-                        <path d="M12 5l7 7-7 7"/>
-                    </svg>
-                </div>
-            </a>
-        </div>
-
-        <!-- Research Areas Section -->
-        <div class="section-header">
-            <h2 class="section-title">Explore My Core Research Areas</h2>
-            <p class="section-subtitle">
-                A collection of insights, frameworks, and technical guides on building proprietary, AI-powered operating systems
-            </p>
-        </div>
-
-        <!-- Primary Focus Areas -->
-        <div class="priority-section">
-            <div class="priority-badge">
-                <svg class="star-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                </svg>
-                Primary Focus Areas
-            </div>
-
-            <div class="research-grid">
-                <!-- MarTech Architecture -->
-                <article class="research-card">
-                    <div class="research-card-header">
-                        <div class="research-icon">MT</div>
-                        <h2 class="research-title">MarTech Architecture</h2>
-                    </div>
-                    <p class="research-description">
-                        Building scalable marketing technology ecosystems that drive sustainable growth. Explore comprehensive frameworks for designing integrated tech stacks that eliminate data silos, optimize customer journeys, and create seamless operational workflows that scale infinitely with your business.
-                    </p>
-                    <div class="tag-cloud">
-                        <a href="#" class="tag">MarTech Stack Design</a>
-                        <a href="#" class="tag">Technology Integration</a>
-                        <a href="#" class="tag">Customer Data Platform</a>
-                        <a href="#" class="tag">Marketing Automation</a>
-                        <a href="#" class="tag">Tech Stack Optimization</a>
-                        <a href="#" class="tag">CRM Architecture</a>
-                        <a href="#" class="tag">Data Warehousing</a>
-                        <a href="#" class="tag">System Integration</a>
-                        <a href="#" class="tag">Enterprise Architecture</a>
-                    </div>
-                </article>
-
-                <!-- API Integration -->
-                <article class="research-card">
-                    <div class="research-card-header">
-                        <div class="research-icon">API</div>
-                        <h2 class="research-title">API Integration</h2>
-                    </div>
-                    <p class="research-description">
-                        Master the critical discipline of connecting disparate systems to create unified, intelligent operations. Learn advanced practices for designing robust API architectures that enable seamless data flow, automated workflows, and real-time synchronization across your entire technology ecosystem.
-                    </p>
-                    <div class="tag-cloud">
-                        <a href="#" class="tag">API Design</a>
-                        <a href="#" class="tag">System Integration</a>
-                        <a href="#" class="tag">Webhook Architecture</a>
-                        <a href="#" class="tag">Real-Time Data Sync</a>
-                        <a href="#" class="tag">Third-Party Integrations</a>
-                        <a href="#" class="tag">RESTful APIs</a>
-                        <a href="#" class="tag">Data Pipeline</a>
-                        <a href="#" class="tag">Integration Patterns</a>
-                        <a href="#" class="tag">Enterprise APIs</a>
-                    </div>
-                </article>
-
-                <!-- Infinite Operations -->
-                <article class="research-card">
-                    <div class="research-card-header">
-                        <div class="research-icon">∞</div>
-                        <h2 class="research-title">Infinite Operations</h2>
-                    </div>
-                    <p class="research-description">
-                        Build self-sustaining business processes using our proven 19-step framework that continuously optimizes and scales without human intervention. Transform traditional operations into intelligent, adaptive systems across Discovery, Foundation, Enrichment, Synthesis, Engagement, and Amplification phases.
-                    </p>
-                    <div class="tag-cloud">
-                        <a href="#" class="tag">Infinite Scaling</a>
-                        <a href="#" class="tag">Self-Optimizing Systems</a>
-                        <a href="#" class="tag">Power User Adoption</a>
-                        <a href="#" class="tag">Data Acquisition</a>
-                        <a href="#" class="tag">Lead Nurturing</a>
-                        <a href="#" class="tag">Campaign Optimization</a>
-                        <a href="#" class="tag">Autonomous Systems</a>
-                        <a href="#" class="tag">Growth Operations</a>
-                        <a href="#" class="tag">Intelligent Scaling</a>
-                        <a href="#" class="tag">19-Step Framework</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-
-        <!-- Supporting Research Areas -->
-        <div class="section-header">
-            <h2 class="section-title">Supporting Research Areas</h2>
-            <p class="section-subtitle">
-                Complementary expertise areas that enhance and support the primary focus domains
-            </p>
-        </div>
-
-        <div class="research-grid">
-            <!-- Model Context Protocol -->
-            <article class="research-card">
-                <div class="research-card-header">
-                    <div class="research-icon">MCP</div>
-                    <h2 class="research-title">Model Context Protocol (MCP)</h2>
-                </div>
-                <p class="research-description">
-                    Unlock the full potential of AI through standardized context management. Explore how MCP creates seamless integration between AI models and enterprise systems, enabling sophisticated automation while maintaining data security and operational control.
-                </p>
-                <div class="tag-cloud">
-                    <a href="#" class="tag">MCP Implementation</a>
-                    <a href="#" class="tag">AI Integration</a>
-                    <a href="#" class="tag">Context Management</a>
-                    <a href="#" class="tag">Enterprise AI</a>
-                    <a href="#" class="tag">AI Architecture</a>
-                    <a href="#" class="tag">Model Integration</a>
-                    <a href="#" class="tag">AI Orchestration</a>
-                    <a href="#" class="tag">Intelligent Systems</a>
-                </div>
-            </article>
-
-            <!-- AI Solutions -->
-            <article class="research-card">
-                <div class="research-card-header">
-                    <div class="research-icon">AI</div>
-                    <h2 class="research-title">AI Solutions</h2>
-                </div>
-                <p class="research-description">
-                    Architect intelligent systems that solve real business problems. From strategic planning to implementation, discover how to design AI solutions that deliver measurable ROI, scale efficiently, and integrate seamlessly with existing operations.
-                </p>
-                <div class="tag-cloud">
-                    <a href="#" class="tag">AI Strategy</a>
-                    <a href="#" class="tag">Machine Learning</a>
-                    <a href="#" class="tag">AI Implementation</a>
-                    <a href="#" class="tag">Intelligent Automation</a>
-                    <a href="#" class="tag">AI Architecture</a>
-                    <a href="#" class="tag">Business AI</a>
-                    <a href="#" class="tag">AI ROI</a>
-                    <a href="#" class="tag">AI Development</a>
-                    <a href="#" class="tag">AI Solutions Design</a>
-                </div>
-            </article>
-
-            <!-- Prompt Engineering -->
-            <article class="research-card">
-                <div class="research-card-header">
-                    <div class="research-icon">PE</div>
-                    <h2 class="research-title">Prompt Engineering</h2>
-                </div>
-                <p class="research-description">
-                    Master the discipline of communicating effectively with AI systems to achieve consistent, high-quality outputs. Explore advanced techniques for designing prompts that unlock the full potential of language models while maintaining reliability and precision.
-                </p>
-                <div class="tag-cloud">
-                    <a href="#" class="tag">Prompt Design</a>
-                    <a href="#" class="tag">AI Communication</a>
-                    <a href="#" class="tag">Language Models</a>
-                    <a href="#" class="tag">Prompt Optimization</a>
-                    <a href="#" class="tag">AI Prompting</a>
-                    <a href="#" class="tag">Chain-of-Thought</a>
-                    <a href="#" class="tag">Prompt Templates</a>
-                    <a href="#" class="tag">AI Interaction Design</a>
-                </div>
-            </article>
-
-            <!-- Automation & Orchestration -->
-            <article class="research-card">
-                <div class="research-card-header">
-                    <div class="research-icon">AO</div>
-                    <h2 class="research-title">Automation & Orchestration</h2>
-                </div>
-                <p class="research-description">
-                    Design self-optimizing systems that eliminate manual bottlenecks and scale operations effortlessly. Learn frameworks for creating intelligent workflows that adapt, optimize, and execute complex processes with minimal human intervention.
-                </p>
-                <div class="tag-cloud">
-                    <a href="#" class="tag">Process Automation</a>
-                    <a href="#" class="tag">Workflow Orchestration</a>
-                    <a href="#" class="tag">Intelligent Systems</a>
-                    <a href="#" class="tag">Operational Efficiency</a>
-                    <a href="#" class="tag">Automated Workflows</a>
-                    <a href="#" class="tag">Business Process Automation</a>
-                    <a href="#" class="tag">System Orchestration</a>
-                    <a href="#" class="tag">Scalable Operations</a>
-                </div>
-            </article>
-
-            <!-- Activating Data Insights -->
-            <article class="research-card">
-                <div class="research-card-header">
-                    <div class="research-icon">DI</div>
-                    <h2 class="research-title">Activating Data Insights</h2>
-                </div>
-                <p class="research-description">
-                    Transform raw data into actionable intelligence that drives revenue growth. Discover methodologies for turning customer behavior patterns, market signals, and performance metrics into strategic advantages through systematic analysis and intelligent activation frameworks.
-                </p>
-                <div class="tag-cloud">
-                    <a href="#" class="tag">Data Analytics</a>
-                    <a href="#" class="tag">Customer Intelligence</a>
-                    <a href="#" class="tag">Behavioral Analytics</a>
-                    <a href="#" class="tag">Performance Metrics</a>
-                    <a href="#" class="tag">Data Activation</a>
-                    <a href="#" class="tag">Business Intelligence</a>
-                    <a href="#" class="tag">Predictive Analytics</a>
-                    <a href="#" class="tag">Data-Driven Strategy</a>
-                </div>
-            </article>
-
-            <!-- Analytics, Attribution, & Conversion Tracking -->
-            <article class="research-card">
-                <div class="research-card-header">
-                    <div class="research-icon">AA</div>
-                    <h2 class="research-title">Analytics, Attribution, & Conversion Tracking</h2>
-                </div>
-                <p class="research-description">
-                    Implement sophisticated measurement systems that provide complete visibility into customer journeys and campaign performance. Learn advanced techniques for multi-touch attribution, conversion optimization, and data-driven decision making.
-                </p>
-                <div class="tag-cloud">
-                    <a href="#" class="tag">Conversion Tracking</a>
-                    <a href="#" class="tag">Multi-Touch Attribution</a>
-                    <a href="#" class="tag">Performance Analytics</a>
-                    <a href="#" class="tag">Customer Journey Analytics</a>
-                    <a href="#" class="tag">ROI Measurement</a>
-                    <a href="#" class="tag">Campaign Analytics</a>
-                    <a href="#" class="tag">Data Attribution</a>
-                    <a href="#" class="tag">Analytics Implementation</a>
-                </div>
-            </article>
-        </div>
-
-        <!-- Featured Projects Section -->
-        <div class="section-header mt-16">
-            <h2 class="section-title">Featured Projects</h2>
-            <p class="section-subtitle">
-                Transformative AI solutions and implementations
-            </p>
-        </div>
-
-        <div class="research-grid mb-16">
-            <!-- The Prompt Engineering Project -->
-            <a href="#prompt-engineering-project" class="nav-card">
-                <div class="nav-card-header">
-                    <div class="nav-card-icon">⚡</div>
-                    <h3 class="nav-card-title">The Prompt Engineering Project</h3>
-                </div>
-                <p class="nav-card-description">
-                    Operational infrastructure designed to facilitate all growth marketing workflows built with prompt libraries. Creates all content, strategy development, and task execution simultaneously instead of traditional step-by-step workflows.
-                </p>
-                <div class="nav-card-cta">
-                    Explore Project
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14"/>
-                        <path d="M12 5l7 7-7 7"/>
-                    </svg>
-                </div>
-            </a>
-
-            <!-- MCP Studio -->
-            <a href="#mcp-studio" class="nav-card">
-                <div class="nav-card-header">
-                    <div class="nav-card-icon">🎛️</div>
-                    <h3 class="nav-card-title">MCP Studio</h3>
-                </div>
-                <p class="nav-card-description">
-                    Comprehensive AI Content Operating System (OS) that centralizes, standardizes, and scales all AI communication context and content generation processes within an organization. Democratizes AI capabilities for non-technical users.
-                </p>
-                <div class="nav-card-cta">
-                    Learn More
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14"/>
-                        <path d="M12 5l7 7-7 7"/>
-                    </svg>
-                </div>
-            </a>
-
-            <!-- MCP Chrome Extension -->
-            <a href="#mcp-chrome-extension" class="nav-card">
-                <div class="nav-card-header">
-                    <div class="nav-card-icon">🔌</div>
-                    <h3 class="nav-card-title">MCP Chrome Extension</h3>
-                </div>
-                <p class="nav-card-description">
-                    Advanced browser extension that integrates with Claude.ai and GitHub, revolutionizing prompt management through version-controlled context injection and intelligent variable-driven workflows.
-                </p>
-                <div class="nav-card-cta">
-                    View Extension
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14"/>
-                        <path d="M12 5l7 7-7 7"/>
-                    </svg>
-                </div>
-            </a>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="contact-section">
-            <h2 class="contact-title">Ready to Connect?</h2>
-            <p class="contact-subtitle">Let's discuss how we can architect your AI-powered future together.</p>
-            <div class="contact-links">
-                <a href="mailto:tommy@thepromptengineeringproject.com" class="contact-link">
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                        <polyline points="22,6 12,13 2,6"/>
-                    </svg>
-                    Email Me
-                </a>
-                <a href="https://www.linkedin.com/in/tommysaunders/" class="contact-link" target="_blank" rel="noopener">
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                        <rect x="2" y="9" width="4" height="12"/>
-                        <circle cx="4" cy="4" r="2"/>
-                    </svg>
-                    LinkedIn
-                </a>
-                <a href="https://medium.com/@tommysaunders84" class="contact-link" target="_blank" rel="noopener">
-                    <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <polyline points="14,2 14,8 20,8"/>
-                    </svg>
-                    Medium
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script>
-    // Theme Management
-    class ThemeManager {
-        constructor() {
-            this.init();
-        }
-
-        init() {
-            const savedTheme = localStorage.getItem('theme');
-            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            const initialTheme = savedTheme || systemTheme;
-
-            this.setTheme(initialTheme);
-            this.watchSystemChanges();
-        }
-
-        setTheme(theme) {
-            document.documentElement.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-
-            // Update meta theme color for mobile browsers
-            const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-            if (metaThemeColor) {
-                const bgColor = theme === 'dark' ? '#09090b' : '#ffffff';
-                metaThemeColor.setAttribute('content', bgColor);
+        /* System preference detection */
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme]) {
+                --background: #09090b;
+                --foreground: #fafafa;
+                --muted: #18181b;
+                --muted-foreground: #a1a1aa;
+                --border: #27272a;
+                --input: #27272a;
+                --primary: #fafafa;
+                --primary-foreground: #18181b;
+                --secondary: #27272a;
+                --secondary-foreground: #fafafa;
+                --accent: #27272a;
+                --accent-foreground: #fafafa;
+                --ring: #d4d4d8;
             }
         }
 
-        toggle() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            this.setTheme(newTheme);
+        /* Mobile-First Base Styles */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: var(--foreground);
+            background-color: var(--background);
+            font-feature-settings: 'cv11', 'ss01';
+            font-variation-settings: 'opsz' 32;
+            overflow-x: hidden;
+            
+            /* Mobile optimizations */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            
+            /* Prevent text size adjustment on mobile */
+            -webkit-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            
+            /* Smooth transitions for theme changes */
+            transition: color 0.3s ease, background-color 0.3s ease;
         }
 
-        watchSystemChanges() {
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-                if (!localStorage.getItem('theme')) {
-                    this.setTheme(e.matches ? 'dark' : 'light');
-                }
-            });
+        /* Mobile-friendly selection */
+        ::selection {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
         }
-    }
 
-    // Initialize theme manager
-    const themeManager = new ThemeManager();
+        /* Remove tap highlights on mobile */
+        button, a {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+        }
 
-    // Global functions
-    function toggleTheme() {
-        themeManager.toggle();
-    }
+        /* Container System */
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+            max-width: 100%;
+        }
 
-    function toggleMobileMenu() {
-        const navMenu = document.querySelector('.nav-menu');
-        const navOverlay = document.querySelector('.nav-overlay');
-        const navToggle = document.querySelector('.nav-toggle');
+        /* Typography Classes */
+        .text-xs { font-size: var(--font-size-xs); }
+        .text-sm { font-size: var(--font-size-sm); }
+        .text-base { font-size: var(--font-size-base); }
+        .text-lg { font-size: var(--font-size-lg); }
+        .text-xl { font-size: var(--font-size-xl); }
+        .text-2xl { font-size: var(--font-size-2xl); }
+        .text-3xl { font-size: var(--font-size-3xl); }
+        .text-4xl { font-size: var(--font-size-4xl); }
+        .text-5xl { font-size: var(--font-size-5xl); }
+        .text-6xl { font-size: var(--font-size-6xl); }
+
+        .font-light { font-weight: 300; }
+        .font-normal { font-weight: 400; }
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+
+        .text-muted { color: var(--muted-foreground); }
+        .text-center { text-align: center; }
+
+        /* Layout Utilities */
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .hidden { display: none; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .flex-col { flex-direction: column; }
+        .gap-1 { gap: var(--space-1); }
+        .gap-2 { gap: var(--space-2); }
+        .gap-3 { gap: var(--space-3); }
+        .gap-4 { gap: var(--space-4); }
+        .gap-6 { gap: var(--space-6); }
+        .gap-8 { gap: var(--space-8); }
+
+        /* Grid System */
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .grid-auto { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+
+        /* Spacing */
+        .p-1 { padding: var(--space-1); }
+        .p-2 { padding: var(--space-2); }
+        .p-3 { padding: var(--space-3); }
+        .p-4 { padding: var(--space-4); }
+        .p-6 { padding: var(--space-6); }
+        .p-8 { padding: var(--space-8); }
+
+        .py-2 { padding-top: var(--space-2); padding-bottom: var(--space-2); }
+        .py-3 { padding-top: var(--space-3); padding-bottom: var(--space-3); }
+        .py-4 { padding-top: var(--space-4); padding-bottom: var(--space-4); }
+        .py-6 { padding-top: var(--space-6); padding-bottom: var(--space-6); }
+        .py-8 { padding-top: var(--space-8); padding-bottom: var(--space-8); }
+        .py-12 { padding-top: var(--space-12); padding-bottom: var(--space-12); }
+        .py-16 { padding-top: var(--space-16); padding-bottom: var(--space-16); }
+        .py-20 { padding-top: var(--space-20); padding-bottom: var(--space-20); }
+        .py-24 { padding-top: var(--space-24); padding-bottom: var(--space-24); }
+
+        .px-2 { padding-left: var(--space-2); padding-right: var(--space-2); }
+        .px-3 { padding-left: var(--space-3); padding-right: var(--space-3); }
+        .px-4 { padding-left: var(--space-4); padding-right: var(--space-4); }
+        .px-6 { padding-left: var(--space-6); padding-right: var(--space-6); }
+
+        .m-0 { margin: 0; }
+        .mb-2 { margin-bottom: var(--space-2); }
+        .mb-3 { margin-bottom: var(--space-3); }
+        .mb-4 { margin-bottom: var(--space-4); }
+        .mb-6 { margin-bottom: var(--space-6); }
+        .mb-8 { margin-bottom: var(--space-8); }
+        .mb-12 { margin-bottom: var(--space-12); }
+        .mb-16 { margin-bottom: var(--space-16); }
+        .mt-4 { margin-top: var(--space-4); }
+        .mt-8 { margin-top: var(--space-8); }
+        .mt-12 { margin-top: var(--space-12); }
+        .mt-16 { margin-top: var(--space-16); }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+
+        /* Sizing */
+        .w-full { width: 100%; }
+        .h-full { height: 100%; }
+        .max-w-2xl { max-width: 42rem; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-6xl { max-width: 72rem; }
+
+        /* Position */
+        .relative { position: relative; }
+        .sticky { position: sticky; }
+        .fixed { position: fixed; }
+        .top-0 { top: 0; }
+        .right-0 { right: 0; }
+        .bottom-0 { bottom: 0; }
+        .left-0 { left: 0; }
+        .z-10 { z-index: 10; }
+        .z-50 { z-index: 50; }
+        .z-100 { z-index: 100; }
+
+        /* Overflow */
+        .overflow-hidden { overflow: hidden; }
+        .overflow-y-auto { overflow-y: auto; }
+
+        /* Opacity */
+        .opacity-0 { opacity: 0; }
+        .opacity-50 { opacity: 0.5; }
+        .opacity-90 { opacity: 0.9; }
+        .opacity-100 { opacity: 1; }
+
+        /* Transitions */
+        .transition-all { transition: all 150ms ease-in-out; }
+        .transition-colors { transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out; }
+        .transition-transform { transition: transform 150ms ease-in-out; }
+
+        /* Shadows */
+        .shadow-sm { box-shadow: var(--shadow-sm); }
+        .shadow { box-shadow: var(--shadow); }
+        .shadow-md { box-shadow: var(--shadow-md); }
+        .shadow-lg { box-shadow: var(--shadow-lg); }
+
+        /* Hover States */
+        .hover\:shadow-md:hover { box-shadow: var(--shadow-md); }
+        .hover\:shadow-lg:hover { box-shadow: var(--shadow-lg); }
+        .hover\:scale-105:hover { transform: scale(1.05); }
+        .hover\:-translate-y-2:hover { transform: translateY(-0.5rem); }
+        .hover\:bg-muted:hover { background-color: var(--muted); }
+        .hover\:bg-primary:hover { background-color: var(--primary); }
+        .hover\:text-foreground:hover { color: var(--foreground); }
+        .hover\:text-primary-foreground:hover { color: var(--primary-foreground); }
+        .hover\:opacity-90:hover { opacity: 0.9; }
+
+        /* Border Radius */
+        .rounded { border-radius: var(--border-radius); }
+        .rounded-lg { border-radius: calc(var(--border-radius) * 1.5); }
+        .rounded-full { border-radius: 9999px; }
+
+        /* Header */
+        .header {
+            position: sticky;
+            top: 0;
+            height: var(--header-height);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        [data-theme="dark"] .header {
+            background-color: rgba(9, 9, 11, 0.95);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            padding: 0 var(--container-padding);
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-weight: 600;
+            font-size: var(--font-size-lg);
+            color: var(--foreground);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--muted-foreground) 100%);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-foreground);
+            font-weight: bold;
+            font-size: var(--font-size-base);
+            transition: transform 0.2s ease;
+        }
+
+        .logo:hover .logo-icon {
+            transform: scale(1.05);
+        }
+
+        /* Navigation Links - Hidden on mobile */
+        .nav-links {
+            display: none;
+        }
+
+        // Mobile menu button
+        .nav-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--button-height);
+            height: var(--button-height);
+            background: none;
+            border: none;
+            color: var(--foreground);
+            cursor: pointer;
+            border-radius: var(--border-radius);
+            transition: background-color 0.2s ease;
+        }
+
+        .nav-toggle:hover {
+            background-color: var(--muted);
+        }
+
+        .nav-toggle .icon {
+            transition: transform 0.3s ease;
+        }
+
+        .nav-toggle.active .icon {
+            transform: rotate(90deg);
+        }
+
+        /* Mobile menu overlay */
+        .nav-overlay {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 99;
+        }
+
+        .nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Mobile menu */
+        .nav-menu {
+            position: fixed;
+            top: var(--header-height);
+            right: -300px;
+            width: 280px;
+            height: calc(100vh - var(--header-height));
+            background-color: var(--background);
+            border-left: 1px solid var(--border);
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            z-index: 100;
+        }
+
+        .nav-menu.active {
+            right: 0;
+        }
+
+        .nav-menu-content {
+            padding: var(--space-6) var(--space-4);
+        }
+
+        .nav-link {
+            display: block;
+            padding: var(--space-3) var(--space-4);
+            color: var(--muted-foreground);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--font-size-base);
+            border-radius: var(--border-radius);
+            transition: all 0.2s ease;
+            margin-bottom: var(--space-2);
+            min-height: var(--touch-target);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--foreground);
+            background-color: var(--muted);
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            bottom: var(--space-4);
+            right: var(--space-4);
+            z-index: 1000;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            touch-action: manipulation;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .theme-toggle:active {
+            transform: translateY(0);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .theme-toggle-icon {
+            width: 24px;
+            height: 24px;
+            transition: all 0.3s ease;
+        }
+
+        /* Icon states */
+        .theme-toggle .light-icon {
+            display: block;
+        }
+
+        .theme-toggle .dark-icon {
+            display: none;
+        }
+
+        [data-theme="dark"] .theme-toggle .light-icon {
+            display: none;
+        }
+
+        [data-theme="dark"] .theme-toggle .dark-icon {
+            display: block;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            min-height: var(--button-height);
+            padding: var(--space-3) var(--space-4);
+            font-size: var(--font-size-base);
+            font-weight: 500;
+            line-height: 1.2;
+            text-decoration: none;
+            text-align: center;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease-in-out;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--secondary-foreground);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent);
+            border-color: var(--foreground);
+        }
+
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--muted-foreground);
+            border: 1px solid transparent;
+        }
+
+        .btn-ghost:hover {
+            background-color: var(--muted);
+            color: var(--foreground);
+        }
+
+        .btn-sm {
+            min-height: 36px;
+            padding: var(--space-2) var(--space-3);
+            font-size: var(--font-size-sm);
+        }
+
+        .btn-lg {
+            min-height: 52px;
+            padding: var(--space-4) var(--space-6);
+            font-size: var(--font-size-lg);
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: var(--border-radius);
+            padding: var(--space-4);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease-in-out;
+            width: 100%;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-interactive {
+            cursor: pointer;
+        }
+
+        .card-interactive:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--background) 0%, var(--muted) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0);
+            background-size: 30px 30px;
+            pointer-events: none;
+        }
+
+        [data-theme="dark"] .hero::before {
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-title {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: var(--space-6);
+            word-wrap: break-word;
+            hyphens: auto;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--muted-foreground) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--muted-foreground);
+            margin-bottom: var(--space-2);
+            max-width: 100%;
+            line-height: 1.6;
+        }
+
+        .hero-tagline {
+            font-size: var(--font-size-base);
+            color: var(--foreground);
+            font-weight: 500;
+            margin-bottom: var(--space-8);
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border-radius: 9999px;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            margin-bottom: var(--space-6);
+        }
+
+        .star-icon {
+            width: 1rem;
+            height: 1rem;
+            fill: currentColor;
+        }
+
+        /* Quick Navigation Cards */
+        .quick-nav {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-4);
+            margin-bottom: var(--space-8);
+        }
+
+        .nav-card {
+            background: var(--background);
+            border: 1px solid var(--border);
+            border-radius: var(--border-radius);
+            padding: var(--space-6);
+            transition: all 0.2s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .nav-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .nav-card-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-4);
+        }
+
+        .nav-card-icon {
+            background: var(--muted);
+            padding: var(--space-3);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+            color: var(--muted-foreground);
+        }
+
+        .nav-card:hover .nav-card-icon {
+            background: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .nav-card h2, .nav-card h3 {
+            margin: 0;
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+        }
+
+        .nav-card p {
+            margin: 0;
+            color: var(--muted-foreground);
+            font-size: var(--font-size-base);
+            line-height: 1.5;
+        }
+
+        .nav-card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            color: var(--primary);
+            transition: gap 0.2s ease;
+            margin-top: var(--space-3);
+        }
+
+        .nav-card:hover .nav-card-cta {
+            gap: var(--space-3);
+        }
+
+        /* Section Styles */
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-16);
+        }
+
+        .section-title {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            margin-bottom: var(--space-4);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--muted-foreground) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            font-size: var(--font-size-base);
+            color: var(--muted-foreground);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Priority Section */
+        .priority-section {
+            background-color: var(--muted);
+            border-radius: var(--border-radius);
+            padding: var(--space-6);
+            margin-bottom: var(--space-12);
+        }
+
+        .priority-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border-radius: 9999px;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            margin-bottom: var(--space-6);
+        }
+
+        /* Research Grid */
+        .research-grid {
+            display: grid;
+            gap: var(--space-6);
+            grid-template-columns: 1fr;
+        }
+
+        /* Research Card */
+        .research-card {
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: var(--border-radius);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .research-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .research-card-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            margin-bottom: var(--space-4);
+        }
+
+        .research-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--muted-foreground) 100%);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-foreground);
+            font-weight: bold;
+            font-size: var(--font-size-base);
+            flex-shrink: 0;
+        }
+
+        .research-title {
+            font-size: var(--font-size-xl);
+            font-weight: 600;
+            color: var(--foreground);
+            margin: 0;
+        }
+
+        .research-description {
+            font-size: var(--font-size-base);
+            color: var(--muted-foreground);
+            line-height: 1.6;
+            margin-bottom: var(--space-4);
+        }
+
+        /* Tag Cloud */
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-2);
+            margin-top: var(--space-4);
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            padding: var(--space-1) var(--space-2);
+            background-color: var(--muted);
+            border: 1px solid var(--border);
+            border-radius: var(--border-radius);
+            font-size: var(--font-size-xs);
+            font-weight: 400;
+            color: var(--muted-foreground);
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
+            white-space: nowrap;
+        }
+
+        .tag:hover {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border-color: var(--primary);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #27272a 100%);
+            color: var(--primary-foreground);
+            border-radius: var(--border-radius);
+            padding: var(--space-6);
+            text-align: center;
+            margin-top: var(--space-16);
+        }
+
+        .contact-title {
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: var(--primary-foreground);
+        }
+
+        .contact-subtitle {
+            font-size: var(--font-size-base);
+            color: rgba(250, 250, 250, 0.8);
+            margin-bottom: var(--space-6);
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-4);
+            align-items: center;
+        }
+
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-4);
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: var(--border-radius);
+            color: var(--primary-foreground);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--font-size-sm);
+            transition: all 0.2s ease;
+        }
+
+        .contact-link:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            width: 1rem;
+            height: 1rem;
+            fill: currentColor;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--muted);
+            border-top: 1px solid var(--border);
+            padding: var(--space-8) 0;
+            margin-top: var(--space-20);
+        }
+
+        .footer-content {
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+            justify-content: center;
+            margin-bottom: var(--space-6);
+        }
+
+        .footer-link {
+            color: var(--muted-foreground);
+            text-decoration: none;
+            font-size: var(--font-size-sm);
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--foreground);
+        }
+
+        .footer-copyright {
+            color: var(--muted-foreground);
+            font-size: var(--font-size-sm);
+        }
+
+        /* Pure CSS Icons */
+        .icon {
+            width: 1rem;
+            height: 1rem;
+            display: inline-block;
+            flex-shrink: 0;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .icon-sm {
+            width: 0.875rem;
+            height: 0.875rem;
+        }
+
+        .icon-lg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .icon-xl {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .icon-2xl {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        /* SVG Icons */
+        .icon svg {
+            width: 100%;
+            height: 100%;
+            fill: currentColor;
+            stroke: currentColor;
+            stroke-width: 0;
+        }
+
+        /* Icon-specific styles */
+        .star-icon {
+            width: 1rem;
+            height: 1rem;
+            fill: currentColor;
+            stroke: none;
+        }
+
+        .contact-icon {
+            width: 1rem;
+            height: 1rem;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 640px) {
+            .container {
+                max-width: 640px;
+                padding: 0 1.5rem;
+            }
+
+            .btn {
+                width: auto;
+                max-width: none;
+            }
+
+            .hero-title {
+                font-size: var(--font-size-5xl);
+            }
+
+            .hero-subtitle {
+                font-size: var(--font-size-xl);
+                max-width: 800px;
+                margin: 0 auto var(--space-2);
+            }
+
+            .hero-tagline {
+                font-size: var(--font-size-lg);
+            }
+
+            .quick-nav {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-6);
+            }
+
+            .research-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: var(--space-8);
+            }
+
+            .contact-links {
+                flex-direction: row;
+                justify-content: center;
+                gap: var(--space-6);
+            }
+
+            .card {
+                padding: var(--space-6);
+            }
+
+            .footer-links {
+                gap: var(--space-6);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px;
+                padding: 0 2rem;
+            }
+
+            .nav-toggle {
+                display: none;
+            }
+
+            .nav-overlay,
+            .nav-menu {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                align-items: center;
+                gap: var(--space-2);
+            }
+
+            .nav-link {
+                display: inline-block;
+                padding: var(--space-2) var(--space-3);
+                margin-bottom: 0;
+                font-size: var(--font-size-sm);
+                min-height: auto;
+            }
+
+            .section-title {
+                font-size: var(--font-size-4xl);
+            }
+
+            .section-subtitle {
+                font-size: var(--font-size-lg);
+            }
+
+            .theme-toggle {
+                bottom: var(--space-8);
+                right: var(--space-8);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1024px;
+            }
+
+            .hero-title {
+                font-size: var(--font-size-6xl);
+            }
+
+            .nav {
+                padding: 0 var(--space-8);
+            }
+
+            .nav-links {
+                gap: var(--space-4);
+            }
+
+            .research-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: var(--space-10);
+            }
+
+            .btn:hover {
+                transform: translateY(-1px);
+            }
+
+            .btn:active {
+                transform: translateY(0);
+            }
+
+            .card-interactive:hover {
+                transform: translateY(-4px);
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .container {
+                max-width: 1200px;
+            }
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 640px) {
+            .hero {
+                padding: var(--space-12) 0 var(--space-16);
+            }
+
+            .hero-title {
+                font-size: var(--font-size-3xl);
+            }
+
+            .nav-card-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .research-card-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .research-icon {
+                margin: 0 auto;
+            }
+
+            .priority-section,
+            .contact-section {
+                padding: var(--space-6);
+            }
+
+            .contact-title {
+                font-size: var(--font-size-xl);
+            }
+        }
+
+        /* Focus States */
+        .btn:focus,
+        .nav-link:focus,
+        .nav-toggle:focus,
+        .theme-toggle:focus,
+        .nav-card:focus,
+        .contact-link:focus,
+        .tag:focus {
+            outline: 2px solid var(--ring);
+            outline-offset: 2px;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* High Contrast */
+        @media (prefers-contrast: high) {
+            :root {
+                --border: #000000;
+                --muted-foreground: #404040;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: var(--muted);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--muted-foreground);
+            border-radius: var(--border-radius);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: var(--foreground);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="https://tommysaunders.ai" class="logo">
+                <div class="logo-icon">TS</div>
+                <span>Tommy Saunders</span>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-links">
+                <a href="https://tommysaunders.ai/about" class="nav-link">About</a>
+                <a href="https://tommysaunders.ai/portfolio" class="nav-link">Portfolio</a>
+                <a href="https://tommysaunders.ai/contact" class="nav-link">Contact</a>
+                <a href="https://tommysaunders.ai/projects" class="btn btn-ghost btn-sm">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                    Projects
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <div class="nav-toggle-icon"></div>
+            </button>
+        </nav>
         
-        navMenu.classList.toggle('active');
-        navOverlay.classList.toggle('active');
-        navToggle.classList.toggle('active');
-    }
+        <!-- Mobile Menu Overlay -->
+        <div class="nav-overlay" onclick="toggleMobileMenu()"></div>
+        
+        <!-- Mobile Menu -->
+        <div class="nav-menu">
+            <div class="nav-menu-content">
+                <a href="https://tommysaunders.ai/about" class="nav-link" onclick="toggleMobileMenu()">About</a>
+                <a href="https://tommysaunders.ai/portfolio" class="nav-link" onclick="toggleMobileMenu()">Portfolio</a>
+                <a href="https://tommysaunders.ai/market-intelligence" class="nav-link" onclick="toggleMobileMenu()">Market Intelligence</a>
+                <a href="https://tommysaunders.ai/blog" class="nav-link" onclick="toggleMobileMenu()">Resources</a>
+                <a href="https://tommysaunders.ai/projects" class="nav-link" onclick="toggleMobileMenu()">Projects</a>
+                <a href="https://tommysaunders.ai/contact" class="nav-link" onclick="toggleMobileMenu()">Contact</a>
+            </div>
+        </div>
+    </header>
 
-    // Header scroll effect
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header');
-        if (window.scrollY > 50) {
-            header.style.backgroundColor = document.documentElement.getAttribute('data-theme') === 'dark' 
-                ? 'rgba(9, 9, 11, 0.98)' 
-                : 'rgba(255, 255, 255, 0.98)';
-        } else {
-            header.style.backgroundColor = document.documentElement.getAttribute('data-theme') === 'dark' 
-                ? 'rgba(9, 9, 11, 0.95)' 
-                : 'rgba(255, 255, 255, 0.95)';
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <svg class="theme-toggle-icon light-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+        <svg class="theme-toggle-icon dark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero py-24">
+        <div class="container">
+            <div class="hero-content animate-fadeInUp text-center">
+                <div class="badge">
+                    <svg class="star-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                    </svg>
+                    AI Revenue Operations Expert
+                </div>
+                <h1 class="hero-title">
+                    AI Revenue Operations Architect
+                </h1>
+                <p class="hero-subtitle">
+                    I Help Organizations Create Intelligence — That's Not Artificial
+                </p>
+                <p class="hero-tagline">
+                    guiding through the chaos → with real solutions → that make an immediate impact… today.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Navigation Section -->
+    <section class="py-20">
+        <div class="container">
+            <div class="quick-nav mb-16">
+                <!-- Home -->
+                <a href="https://tommysaunders.ai/home" class="nav-card">
+                    <div class="nav-card-header">
+                        <div class="nav-card-icon">
+                            <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9,22 9,12 15,12 15,22"></polyline>
+                            </svg>
+                        </div>
+                        <h2 class="nav-card-title">Home</h2>
+                    </div>
+                    <p class="nav-card-description">
+                        I provide end-to-end expertise—helping organizations strategize, develop, implement, optimize, and scale their AI-powered MarTech infrastructure and operations bridge the gap between technical possibilities and business outcomes.
+                    </p>
+                    <div class="nav-card-cta">
+                        Visit Home
+                        <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12,5 19,12 12,19"></polyline>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- About -->
+                <a href="https://tommysaunders.ai/about" class="nav-card">
+                    <div class="nav-card-header">
+                        <div class="nav-card-icon">
+                            <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h2 class="nav-card-title">About</h2>
+                    </div>
+                    <p class="nav-card-description">
+                        Strategic Leadership in AI. I design intelligent systems that transform how businesses operate and grow. As an AI Revenue Operations Architect, I specialize in designing and implementing sophisticated AI systems that drive measurable business growth.
+                    </p>
+                    <div class="nav-card-cta">
+                        Learn More
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"/>
+                            <path d="M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Portfolio -->
+                <a href="https://tommysaunders.ai/portfolio" class="nav-card">
+                    <div class="nav-card-header">
+                        <div class="nav-card-icon">
+                            <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h2 class="nav-card-title">Portfolio</h2>
+                    </div>
+                    <p class="nav-card-description">
+                        Explore my complete portfolio of AI implementations, revenue operations transformations, and strategic consulting engagements. Case studies demonstrating measurable business impact and ROI.
+                    </p>
+                    <div class="nav-card-cta">
+                        View Portfolio
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"/>
+                            <path d="M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Market Intelligence -->
+                <a href="https://tommysaunders.ai/market-intelligence" class="nav-card">
+                    <div class="nav-card-header">
+                        <div class="nav-card-icon">
+                            <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="23,6 13.5,15.5 8.5,10.5 1,18"></polyline>
+                                <polyline points="17,6 23,6 23,12"></polyline>
+                            </svg>
+                        </div>
+                        <h2 class="nav-card-title">Market Intelligence</h2>
+                    </div>
+                    <p class="nav-card-description">
+                        Strategic insights and analysis on AI market trends, competitive intelligence, and emerging opportunities in the AI-powered business landscape. Data-driven market research and forecasting.
+                    </p>
+                    <div class="nav-card-cta">
+                        View Intelligence
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"/>
+                            <path d="M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Resources -->
+                <a href="https://tommysaunders.ai/blog" class="nav-card">
+                    <div class="nav-card-header">
+                        <div class="nav-card-icon">
+                            <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14,2 14,8 20,8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10,9 9,9 8,9"></polyline>
+                            </svg>
+                        </div>
+                        <h2 class="nav-card-title">Resources</h2>
+                    </div>
+                    <p class="nav-card-description">
+                        Comprehensive collection of tools, templates, frameworks, and guides for implementing AI solutions. Free resources for revenue operations, prompt engineering, and system architecture.
+                    </p>
+                    <div class="nav-card-cta">
+                        Browse Resources
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"/>
+                            <path d="M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- Projects -->
+                <a href="https://tommysaunders.ai/projects" class="nav-card">
+                    <div class="nav-card-header">
+                        <div class="nav-card-icon">
+                            <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16.5 9.4l-9-5.19M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27,6.96 12,12.01 20.73,6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h2 class="nav-card-title">Projects</h2>
+                    </div>
+                    <p class="nav-card-description">
+                        Browse the complete collection of AI implementations, revenue operations transformations, and innovative solutions. Each project demonstrates measurable business impact and strategic value.
+                    </p>
+                    <div class="nav-card-cta">
+                        View All Projects
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"/>
+                            <path d="M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Research Areas Section -->
+            <div class="section-header">
+                <h2 class="section-title">Explore My Core Research Areas</h2>
+                <p class="section-subtitle">
+                    A collection of insights, frameworks, and technical guides on building proprietary, AI-powered operating systems
+                </p>
+            </div>
+
+            <!-- Primary Focus Areas -->
+            <div class="priority-section">
+                <div class="priority-badge">
+                    <svg class="star-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                    </svg>
+                    Primary Focus Areas
+                </div>
+
+                <div class="research-grid">
+                    <!-- MarTech Architecture -->
+                    <a href="https://tommysaunders.ai/blog/martech-architecture" class="research-card">
+                        <div class="research-card-header">
+                            <div class="research-icon">MT</div>
+                            <h2 class="research-title">MarTech Architecture</h2>
+                        </div>
+                        <p class="research-description">
+                            Building scalable marketing technology ecosystems that drive sustainable growth. Explore comprehensive frameworks for designing integrated tech stacks that eliminate data silos, optimize customer journeys, and create seamless operational workflows that scale infinitely with your business.
+                        </p>
+                        <div class="tag-cloud">
+                            <span class="tag">MarTech Stack Design</span>
+                            <span class="tag">Technology Integration</span>
+                            <span class="tag">Customer Data Platform</span>
+                            <span class="tag">Marketing Automation</span>
+                            <span class="tag">Tech Stack Optimization</span>
+                            <span class="tag">CRM Architecture</span>
+                            <span class="tag">Data Warehousing</span>
+                            <span class="tag">System Integration</span>
+                            <span class="tag">Enterprise Architecture</span>
+                        </div>
+                    </a>
+
+                    <!-- API Integration -->
+                    <a href="https://tommysaunders.ai/blog/api-integration" class="research-card">
+                        <div class="research-card-header">
+                            <div class="research-icon">API</div>
+                            <h2 class="research-title">API Integration</h2>
+                        </div>
+                        <p class="research-description">
+                            Master the critical discipline of connecting disparate systems to create unified, intelligent operations. Learn advanced practices for designing robust API architectures that enable seamless data flow, automated workflows, and real-time synchronization across your entire technology ecosystem.
+                        </p>
+                        <div class="tag-cloud">
+                            <span class="tag">API Design</span>
+                            <span class="tag">System Integration</span>
+                            <span class="tag">Webhook Architecture</span>
+                            <span class="tag">Real-Time Data Sync</span>
+                            <span class="tag">Third-Party Integrations</span>
+                            <span class="tag">RESTful APIs</span>
+                            <span class="tag">Data Pipeline</span>
+                            <span class="tag">Integration Patterns</span>
+                            <span class="tag">Enterprise APIs</span>
+                        </div>
+                    </a>
+
+                    <!-- Infinite Operations -->
+                    <a href="https://tommysaunders.ai/blog/infinite-operations" class="research-card">
+                        <div class="research-card-header">
+                            <div class="research-icon">∞</div>
+                            <h2 class="research-title">Infinite Operations</h2>
+                        </div>
+                        <p class="research-description">
+                            Build self-sustaining business processes using our proven 19-step framework that continuously optimizes and scales without human intervention. Transform traditional operations into intelligent, adaptive systems across Discovery, Foundation, Enrichment, Synthesis, Engagement, and Amplification phases.
+                        </p>
+                        <div class="tag-cloud">
+                            <span class="tag">Infinite Scaling</span>
+                            <span class="tag">Self-Optimizing Systems</span>
+                            <span class="tag">Power User Adoption</span>
+                            <span class="tag">Data Acquisition</span>
+                            <span class="tag">Lead Nurturing</span>
+                            <span class="tag">Campaign Optimization</span>
+                            <span class="tag">Autonomous Systems</span>
+                            <span class="tag">Growth Operations</span>
+                            <span class="tag">Intelligent Scaling</span>
+                            <span class="tag">19-Step Framework</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Supporting Research Areas -->
+            <div class="section-header">
+                <h2 class="section-title">Supporting Research Areas</h2>
+                <p class="section-subtitle">
+                    Complementary expertise areas that enhance and support the primary focus domains
+                </p>
+            </div>
+
+            <div class="research-grid">
+                <!-- Model Context Protocol -->
+                <a href="https://tommysaunders.ai/blog/model-context-protocol" class="research-card">
+                    <div class="research-card-header">
+                        <div class="research-icon">MCP</div>
+                        <h2 class="research-title">Model Context Protocol (MCP)</h2>
+                    </div>
+                    <p class="research-description">
+                        Unlock the full potential of AI through standardized context management. Explore how MCP creates seamless integration between AI models and enterprise systems, enabling sophisticated automation while maintaining data security and operational control.
+                    </p>
+                    <div class="tag-cloud">
+                        <span class="tag">MCP Implementation</span>
+                        <span class="tag">AI Integration</span>
+                        <span class="tag">Context Management</span>
+                        <span class="tag">Enterprise AI</span>
+                        <span class="tag">AI Architecture</span>
+                        <span class="tag">Model Integration</span>
+                        <span class="tag">AI Orchestration</span>
+                        <span class="tag">Intelligent Systems</span>
+                    </div>
+                </a>
+
+                <!-- AI Solutions -->
+                <a href="https://tommysaunders.ai/blog/ai-solutions" class="research-card">
+                    <div class="research-card-header">
+                        <div class="research-icon">AI</div>
+                        <h2 class="research-title">AI Solutions</h2>
+                    </div>
+                    <p class="research-description">
+                        Architect intelligent systems that solve real business problems. From strategic planning to implementation, discover how to design AI solutions that deliver measurable ROI, scale efficiently, and integrate seamlessly with existing operations.
+                    </p>
+                    <div class="tag-cloud">
+                        <span class="tag">AI Strategy</span>
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">AI Implementation</span>
+                        <span class="tag">Intelligent Automation</span>
+                        <span class="tag">AI Architecture</span>
+                        <span class="tag">Business AI</span>
+                        <span class="tag">AI ROI</span>
+                        <span class="tag">AI Development</span>
+                        <span class="tag">AI Solutions Design</span>
+                    </div>
+                </a>
+
+                <!-- Prompt Engineering -->
+                <a href="https://tommysaunders.ai/blog/prompt-engineering" class="research-card">
+                    <div class="research-card-header">
+                        <div class="research-icon">PE</div>
+                        <h2 class="research-title">Prompt Engineering</h2>
+                    </div>
+                    <p class="research-description">
+                        Master the discipline of communicating effectively with AI systems to achieve consistent, high-quality outputs. Explore advanced techniques for designing prompts that unlock the full potential of language models while maintaining reliability and precision.
+                    </p>
+                    <div class="tag-cloud">
+                        <span class="tag">Prompt Design</span>
+                        <span class="tag">AI Communication</span>
+                        <span class="tag">Language Models</span>
+                        <span class="tag">Prompt Optimization</span>
+                        <span class="tag">AI Prompting</span>
+                        <span class="tag">Chain-of-Thought</span>
+                        <span class="tag">Prompt Templates</span>
+                        <span class="tag">AI Interaction Design</span>
+                    </div>
+                </a>
+
+                <!-- Automation & Orchestration -->
+                <a href="https://tommysaunders.ai/blog/automation-orchestration" class="research-card">
+                    <div class="research-card-header">
+                        <div class="research-icon">AO</div>
+                        <h2 class="research-title">Automation & Orchestration</h2>
+                    </div>
+                    <p class="research-description">
+                        Design self-optimizing systems that eliminate manual bottlenecks and scale operations effortlessly. Learn frameworks for creating intelligent workflows that adapt, optimize, and execute complex processes with minimal human intervention.
+                    </p>
+                    <div class="tag-cloud">
+                        <span class="tag">Process Automation</span>
+                        <span class="tag">Workflow Orchestration</span>
+                        <span class="tag">Intelligent Systems</span>
+                        <span class="tag">Operational Efficiency</span>
+                        <span class="tag">Automated Workflows</span>
+                        <span class="tag">Business Process Automation</span>
+                        <span class="tag">System Orchestration</span>
+                        <span class="tag">Scalable Operations</span>
+                    </div>
+                </a>
+
+                <!-- Activating Data Insights -->
+                <a href="https://tommysaunders.ai/blog/activating-data-insights" class="research-card">
+                    <div class="research-card-header">
+                        <div class="research-icon">DI</div>
+                        <h2 class="research-title">Activating Data Insights</h2>
+                    </div>
+                    <p class="research-description">
+                        Transform raw data into actionable intelligence that drives revenue growth. Discover methodologies for turning customer behavior patterns, market signals, and performance metrics into strategic advantages through systematic analysis and intelligent activation frameworks.
+                    </p>
+                    <div class="tag-cloud">
+                        <span class="tag">Data Analytics</span>
+                        <span class="tag">Customer Intelligence</span>
+                        <span class="tag">Behavioral Analytics</span>
+                        <span class="tag">Performance Metrics</span>
+                        <span class="tag">Data Activation</span>
+                        <span class="tag">Business Intelligence</span>
+                        <span class="tag">Predictive Analytics</span>
+                        <span class="tag">Data-Driven Strategy</span>
+                    </div>
+                </a>
+
+                <!-- Analytics, Attribution, & Conversion Tracking -->
+                <a href="https://tommysaunders.ai/blog/analytics-attribution" class="research-card">
+                    <div class="research-card-header">
+                        <div class="research-icon">AA</div>
+                        <h2 class="research-title">Analytics, Attribution, & Conversion Tracking</h2>
+                    </div>
+                    <p class="research-description">
+                        Implement sophisticated measurement systems that provide complete visibility into customer journeys and campaign performance. Learn advanced techniques for multi-touch attribution, conversion optimization, and data-driven decision making.
+                    </p>
+                    <div class="tag-cloud">
+                        <span class="tag">Conversion Tracking</span>
+                        <span class="tag">Multi-Touch Attribution</span>
+                        <span class="tag">Performance Analytics</span>
+                        <span class="tag">Customer Journey Analytics</span>
+                        <span class="tag">ROI Measurement</span>
+                        <span class="tag">Campaign Analytics</span>
+                        <span class="tag">Data Attribution</span>
+                        <span class="tag">Analytics Implementation</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Featured Projects Section -->
+            <div class="section-header mt-16">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    Transformative AI solutions and implementations
+                </p>
+            </div>
+
+            <div class="research-grid mb-16">
+                <!-- The Prompt Engineering Project -->
+                <a href="https://tommysaunders.ai/projects" class="nav-card">
+                    <div class="nav-card-header">
+                        <div class="nav-card-icon">
+                            <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M12 1v6m0 6v6m3.22-10.22 4.24-4.24m.01 13.66-4.24-4.24m-6.46-5.18L4.76 2.76m13.66.01L14.17 7.02"></path>
+                            </svg>
+                        </div>
+                        <h3 class="nav-card-title">The Prompt Engineering Project</h3>
+                    </div>
+                    <p class="nav-card-description">
+                        Operational infrastructure designed to facilitate all growth marketing workflows built with prompt libraries. Creates all content, strategy development, and task execution simultaneously instead of traditional step-by-step workflows.
+                    </p>
+                    <div class="nav-card-cta">
+                        Explore Project
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"/>
+                            <path d="M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- MCP Studio -->
+                <a href="https://tommysaunders.ai/projects" class="nav-card">
+                    <div class="nav-card-header">
+                        <div class="nav-card-icon">
+                            <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                <rect x="9" y="9" width="6" height="6"></rect>
+                                <line x1="9" y1="1" x2="9" y2="4"></line>
+                                <line x1="15" y1="1" x2="15" y2="4"></line>
+                                <line x1="9" y1="20" x2="9" y2="23"></line>
+                                <line x1="15" y1="20" x2="15" y2="23"></line>
+                                <line x1="20" y1="9" x2="23" y2="9"></line>
+                                <line x1="20" y1="14" x2="23" y2="14"></line>
+                                <line x1="1" y1="9" x2="4" y2="9"></line>
+                                <line x1="1" y1="14" x2="4" y2="14"></line>
+                            </svg>
+                        </div>
+                        <h3 class="nav-card-title">MCP Studio</h3>
+                    </div>
+                    <p class="nav-card-description">
+                        Comprehensive AI Content Operating System (OS) that centralizes, standardizes, and scales all AI communication context and content generation processes within an organization. Democratizes AI capabilities for non-technical users.
+                    </p>
+                    <div class="nav-card-cta">
+                        Learn More
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"/>
+                            <path d="M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </a>
+
+                <!-- MCP Chrome Extension -->
+                <a href="https://tommysaunders.ai/projects" class="nav-card">
+                    <div class="nav-card-header">
+                        <div class="nav-card-icon">
+                            <svg class="icon icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="nav-card-title">MCP Chrome Extension</h3>
+                    </div>
+                    <p class="nav-card-description">
+                        Advanced browser extension that integrates with Claude.ai and GitHub, revolutionizing prompt management through version-controlled context injection and intelligent variable-driven workflows.
+                    </p>
+                    <div class="nav-card-cta">
+                        View Extension
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"/>
+                            <path d="M12 5l7 7-7 7"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="contact-section">
+                <h2 class="contact-title">Ready to Connect?</h2>
+                <p class="contact-subtitle">Let's discuss how we can architect your AI-powered future together.</p>
+                <div class="contact-links">
+                    <a href="mailto:TommySaunders84@gmail.com" class="contact-link">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                        Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/tommysaunders/" class="contact-link" target="_blank" rel="noopener">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://medium.com/@tommysaunders84" class="contact-link" target="_blank" rel="noopener">
+                        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                        </svg>
+                        Medium
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="https://tommysaunders.ai/privacy-policy" class="footer-link">Privacy Policy</a>
+                    <a href="https://tommysaunders.ai/terms-of-use" class="footer-link">Terms of Use</a>
+                    <a href="https://tommysaunders.ai/cookie-policy" class="footer-link">Cookie Policy</a>
+                </div>
+                <p class="footer-copyright">© 2024 Tommy Saunders. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Management
+        class ThemeManager {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                const savedTheme = localStorage.getItem('theme');
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                const initialTheme = savedTheme || systemTheme;
+
+                this.setTheme(initialTheme);
+                this.watchSystemChanges();
+            }
+
+            setTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+
+                // Update meta theme color for mobile browsers
+                const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+                if (metaThemeColor) {
+                    const bgColor = theme === 'dark' ? '#09090b' : '#ffffff';
+                    metaThemeColor.setAttribute('content', bgColor);
+                }
+            }
+
+            toggle() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                this.setTheme(newTheme);
+            }
+
+            watchSystemChanges() {
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                    if (!localStorage.getItem('theme')) {
+                        this.setTheme(e.matches ? 'dark' : 'light');
+                    }
+                });
+            }
         }
-    });
 
-    // Touch feedback for mobile
-    document.addEventListener('touchstart', function(e) {
-        if (e.target.matches('.btn, .nav-link, .nav-card, .theme-toggle')) {
-            e.target.style.transform = 'scale(0.95)';
-            e.target.style.transition = 'transform 0.1s ease';
+        // Initialize theme manager
+        const themeManager = new ThemeManager();
+
+        // Global functions
+        function toggleTheme() {
+            themeManager.toggle();
         }
-    });
 
-    document.addEventListener('touchend', function(e) {
-        if (e.target.matches('.btn, .nav-link, .nav-card, .theme-toggle')) {
-            e.target.style.transform = '';
-            e.target.style.transition = 'transform 0.2s ease';
-        }
-    });
-
-    // Keyboard navigation support
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
+        function toggleMobileMenu() {
             const navMenu = document.querySelector('.nav-menu');
             const navOverlay = document.querySelector('.nav-overlay');
             const navToggle = document.querySelector('.nav-toggle');
             
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                navOverlay.classList.remove('active');
-                navToggle.classList.remove('active');
-            }
+            navMenu.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            navToggle.classList.toggle('active');
         }
-    });
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = document.documentElement.getAttribute('data-theme') === 'dark' 
+                    ? 'rgba(9, 9, 11, 0.98)' 
+                    : 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.backgroundColor = document.documentElement.getAttribute('data-theme') === 'dark' 
+                    ? 'rgba(9, 9, 11, 0.95)' 
+                    : 'rgba(255, 255, 255, 0.95)';
             }
         });
-    });
 
-    // Initialize animations and interactions
-    document.addEventListener('DOMContentLoaded', function() {
-        // Fade in hero content
-        const heroContent = document.querySelector('.hero-content');
-        if (heroContent) {
-            heroContent.style.opacity = '0';
-            heroContent.style.transform = 'translateY(30px)';
-            heroContent.style.transition = 'opacity 1s ease, transform 1s ease';
-            
-            setTimeout(() => {
-                heroContent.style.opacity = '1';
-                heroContent.style.transform = 'translateY(0)';
-            }, 100);
-        }
+        // Touch feedback for mobile
+        document.addEventListener('touchstart', function(e) {
+            if (e.target.matches('.btn, .nav-link, .nav-card, .theme-toggle')) {
+                e.target.style.transform = 'scale(0.95)';
+                e.target.style.transition = 'transform 0.1s ease';
+            }
+        });
 
-        // Add intersection observer for scroll animations
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.1
-        };
+        document.addEventListener('touchend', function(e) {
+            if (e.target.matches('.btn, .nav-link, .nav-card, .theme-toggle')) {
+                e.target.style.transform = '';
+                e.target.style.transition = 'transform 0.2s ease';
+            }
+        });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    observer.unobserve(entry.target);
+        // Keyboard navigation support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const navMenu = document.querySelector('.nav-menu');
+                const navOverlay = document.querySelector('.nav-overlay');
+                const navToggle = document.querySelector('.nav-toggle');
+                
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                    navToggle.classList.remove('active');
                 }
-            });
-        }, observerOptions);
-
-        // Observe cards for animation
-        document.querySelectorAll('.nav-card, .research-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        // Observe sections for animation
-        document.querySelectorAll('.priority-section, .section-header, .contact-section').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            observer.observe(el);
-        });
-    });
-
-    // Focus management for accessibility
-    document.addEventListener('click', function(e) {
-        if (e.target.matches('.nav-toggle')) {
-            const navMenu = document.querySelector('.nav-menu');
-            const firstLink = navMenu.querySelector('.nav-link');
-            if (navMenu.classList.contains('active') && firstLink) {
-                setTimeout(() => firstLink.focus(), 300);
             }
-        }
-    });
+        });
 
-    // Enhanced card hover effects
-    document.querySelectorAll('.nav-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-8px)';
-            this.style.boxShadow = 'var(--shadow-xl)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-            this.style.boxShadow = '';
-        });
-    });
+        // Initialize animations and interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fade in hero content
+            const heroContent = document.querySelector('.hero-content');
+            if (heroContent) {
+                heroContent.style.opacity = '0';
+                heroContent.style.transform = 'translateY(30px)';
+                heroContent.style.transition = 'opacity 1s ease, transform 1s ease';
+                
+                setTimeout(() => {
+                    heroContent.style.opacity = '1';
+                    heroContent.style.transform = 'translateY(0)';
+                }, 100);
+            }
 
-    // Tag hover effects
-    document.querySelectorAll('.tag').forEach(tag => {
-        tag.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-2px)';
-        });
-        
-        tag.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
+            // Add intersection observer for scroll animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
 
-    // Enhanced CTA animations
-    document.querySelectorAll('.nav-card-cta').forEach(cta => {
-        const card = cta.closest('.nav-card');
-        if (card) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe cards for animation
+            document.querySelectorAll('.nav-card, .research-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+
+            // Observe sections for animation
+            document.querySelectorAll('.priority-section, .section-header, .contact-section').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Focus management for accessibility
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('.nav-toggle')) {
+                const navMenu = document.querySelector('.nav-menu');
+                const firstLink = navMenu.querySelector('.nav-link');
+                if (navMenu.classList.contains('active') && firstLink) {
+                    setTimeout(() => firstLink.focus(), 300);
+                }
+            }
+        });
+
+        // Enhanced card hover effects
+        document.querySelectorAll('.nav-card').forEach(card => {
             card.addEventListener('mouseenter', function() {
-                cta.style.transform = 'translateX(4px)';
+                this.style.transform = 'translateY(-8px)';
+                this.style.boxShadow = 'var(--shadow-xl)';
             });
             
             card.addEventListener('mouseleave', function() {
-                cta.style.transform = 'translateX(0)';
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '';
             });
-        }
-    });
+        });
 
-    // Contact link animations
-    document.querySelectorAll('.contact-link').forEach(link => {
-        link.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-2px) scale(1.05)';
+        // Tag hover effects
+        document.querySelectorAll('.tag').forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            tag.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
         });
-        
-        link.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
+
+        // Enhanced CTA animations
+        document.querySelectorAll('.nav-card-cta').forEach(cta => {
+            const card = cta.closest('.nav-card');
+            if (card) {
+                card.addEventListener('mouseenter', function() {
+                    cta.style.transform = 'translateX(4px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    cta.style.transform = 'translateX(0)';
+                });
+            }
         });
-    });
-</script>
-</body> </html>
+
+        // Contact link animations
+        document.querySelectorAll('.contact-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px) scale(1.05)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
