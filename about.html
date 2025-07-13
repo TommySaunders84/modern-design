@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light dark">
+    <title>About - Tommy Saunders - AI Revenue Operations Architect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Light Mode Colors (Default) */
+            --background: #ffffff;
+            --foreground: #09090b;
+            --muted: #f4f4f5;
+            --muted-foreground: #71717a;
+            --border: #e4e4e7;
+            --input: #e4e4e7;
+            --primary: #18181b;
+            --primary-foreground: #fafafa;
+            --secondary: #f4f4f5;
+            --secondary-foreground: #18181b;
+            --accent: #f4f4f5;
+            --accent-foreground: #18181b;
+            --destructive: #ef4444;
+            --destructive-foreground: #fafafa;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --ring: #18181b;
+            --radius: 0.5rem;
+
+            /* Mobile-First Spacing */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+
+            /* Mobile-First Typography Scale */
+            --font-size-xs: 0.75rem;
+            --font-size-sm: 0.875rem;
+            --font-size-base: 1rem;
+            --font-size-lg: 1.125rem;
+            --font-size-xl: 1.25rem;
+            --font-size-2xl: 1.5rem;
+            --font-size-3xl: 1.875rem;
+            --font-size-4xl: 2.25rem;
+            --font-size-5xl: 3rem;
+            --font-size-6xl: 3.75rem;
+
+            /* Mobile-First Layout */
+            --container-padding: 1rem;
+            --border-radius: 0.5rem;
+            --header-height: 60px;
+
+            /* Touch-Friendly Sizes */
+            --touch-target: 44px;
+            --button-height: 44px;
+            --input-height: 44px;
+
+            /* Mobile-First Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Dark Mode Implementation */
+        [data-theme="dark"] {
+            --background: #09090b;
+            --foreground: #fafafa;
+            --muted: #18181b;
+            --muted-foreground: #a1a1aa;
+            --border: #27272a;
+            --input: #27272a;
+            --primary: #fafafa;
+            --primary-foreground: #18181b;
+            --secondary: #27272a;
+            --secondary-foreground: #fafafa;
+            --accent: #27272a;
+            --accent-foreground: #fafafa;
+            --ring: #d4d4d8;
+        }
+
+        /* System preference detection */
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme]) {
+                --background: #09090b;
+                --foreground: #fafafa;
+                --muted: #18181b;
+                --muted-foreground: #a1a1aa;
+                --border: #27272a;
+                --input: #27272a;
+                --primary: #fafafa;
+                --primary-foreground: #18181b;
+                --secondary: #27272a;
+                --secondary-foreground: #fafafa;
+                --accent: #27272a;
+                --accent-foreground: #fafafa;
+                --ring: #d4d4d8;
+            }
+        }
+
+        /* Mobile-First Base Styles */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.5;
+            color: var(--foreground);
+            background-color: var(--background);
+            font-feature-settings: 'cv11', 'ss01';
+            font-variation-settings: 'opsz' 32;
+            overflow-x: hidden;
+            
+            /* Mobile optimizations */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            
+            /* Prevent text size adjustment on mobile */
+            -webkit-text-size-adjust: 100%;
+            -moz-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            
+            /* Smooth transitions for theme changes */
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        /* Mobile-friendly selection */
+        ::selection {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        /* Remove tap highlights on mobile */
+        button, a {
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+        }
+
+        /* Container System */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
+
+        /* Typography Classes */
+        .text-xs { font-size: var(--font-size-xs); }
+        .text-sm { font-size: var(--font-size-sm); }
+        .text-base { font-size: var(--font-size-base); }
+        .text-lg { font-size: var(--font-size-lg); }
+        .text-xl { font-size: var(--font-size-xl); }
+        .text-2xl { font-size: var(--font-size-2xl); }
+        .text-3xl { font-size: var(--font-size-3xl); }
+        .text-4xl { font-size: var(--font-size-4xl); }
+        .text-5xl { font-size: var(--font-size-5xl); }
+        .text-6xl { font-size: var(--font-size-6xl); }
+
+        .font-light { font-weight: 300; }
+        .font-normal { font-weight: 400; }
+        .font-medium { font-weight: 500; }
+        .font-semibold { font-weight: 600; }
+        .font-bold { font-weight: 700; }
+
+        .text-muted { color: var(--muted-foreground); }
+        .text-center { text-align: center; }
+
+        /* Layout Utilities */
+        .flex { display: flex; }
+        .grid { display: grid; }
+        .hidden { display: none; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+        .flex-col { flex-direction: column; }
+        .flex-wrap { flex-wrap: wrap; }
+        .gap-1 { gap: var(--space-1); }
+        .gap-2 { gap: var(--space-2); }
+        .gap-3 { gap: var(--space-3); }
+        .gap-4 { gap: var(--space-4); }
+        .gap-6 { gap: var(--space-6); }
+        .gap-8 { gap: var(--space-8); }
+        .gap-16 { gap: var(--space-16); }
+
+        /* Grid System */
+        .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+        .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .grid-cols-auto { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+        /* Spacing */
+        .p-1 { padding: var(--space-1); }
+        .p-2 { padding: var(--space-2); }
+        .p-3 { padding: var(--space-3); }
+        .p-4 { padding: var(--space-4); }
+        .p-6 { padding: var(--space-6); }
+        .p-8 { padding: var(--space-8); }
+
+        .py-1 { padding-top: var(--space-1); padding-bottom: var(--space-1); }
+        .py-2 { padding-top: var(--space-2); padding-bottom: var(--space-2); }
+        .py-3 { padding-top: var(--space-3); padding-bottom: var(--space-3); }
+        .py-4 { padding-top: var(--space-4); padding-bottom: var(--space-4); }
+        .py-6 { padding-top: var(--space-6); padding-bottom: var(--space-6); }
+        .py-8 { padding-top: var(--space-8); padding-bottom: var(--space-8); }
+        .py-12 { padding-top: var(--space-12); padding-bottom: var(--space-12); }
+        .py-16 { padding-top: var(--space-16); padding-bottom: var(--space-16); }
+        .py-20 { padding-top: var(--space-20); padding-bottom: var(--space-20); }
+        .py-24 { padding-top: var(--space-24); padding-bottom: var(--space-24); }
+
+        .px-2 { padding-left: var(--space-2); padding-right: var(--space-2); }
+        .px-3 { padding-left: var(--space-3); padding-right: var(--space-3); }
+        .px-4 { padding-left: var(--space-4); padding-right: var(--space-4); }
+        .px-6 { padding-left: var(--space-6); padding-right: var(--space-6); }
+        .px-8 { padding-left: var(--space-8); padding-right: var(--space-8); }
+
+        .m-0 { margin: 0; }
+        .mb-2 { margin-bottom: var(--space-2); }
+        .mb-3 { margin-bottom: var(--space-3); }
+        .mb-4 { margin-bottom: var(--space-4); }
+        .mb-6 { margin-bottom: var(--space-6); }
+        .mb-8 { margin-bottom: var(--space-8); }
+        .mb-12 { margin-bottom: var(--space-12); }
+        .mb-16 { margin-bottom: var(--space-16); }
+        .mt-4 { margin-top: var(--space-4); }
+        .mt-8 { margin-top: var(--space-8); }
+        .mt-12 { margin-top: var(--space-12); }
+        .mt-16 { margin-top: var(--space-16); }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+
+        /* Sizing */
+        .w-full { width: 100%; }
+        .h-full { height: 100%; }
+        .max-w-xs { max-width: 20rem; }
+        .max-w-sm { max-width: 24rem; }
+        .max-w-md { max-width: 28rem; }
+        .max-w-lg { max-width: 32rem; }
+        .max-w-xl { max-width: 36rem; }
+        .max-w-2xl { max-width: 42rem; }
+        .max-w-3xl { max-width: 48rem; }
+        .max-w-4xl { max-width: 56rem; }
+        .max-w-5xl { max-width: 64rem; }
+        .max-w-6xl { max-width: 72rem; }
+
+        /* Position */
+        .relative { position: relative; }
+        .absolute { position: absolute; }
+        .fixed { position: fixed; }
+        .sticky { position: sticky; }
+        .top-0 { top: 0; }
+        .right-0 { right: 0; }
+        .bottom-0 { bottom: 0; }
+        .left-0 { left: 0; }
+        .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+        .z-1 { z-index: 1; }
+        .z-10 { z-index: 10; }
+        .z-50 { z-index: 50; }
+        .z-100 { z-index: 100; }
+
+        /* Order */
+        .order-1 { order: 1; }
+        .order-2 { order: 2; }
+
+        /* Background Colors */
+        .bg-background { background-color: var(--background); }
+        .bg-muted { background-color: var(--muted); }
+        .bg-primary { background-color: var(--primary); }
+        .bg-secondary { background-color: var(--secondary); }
+
+        /* Overflow */
+        .overflow-hidden { overflow: hidden; }
+        .overflow-y-auto { overflow-y: auto; }
+
+        /* Opacity */
+        .opacity-0 { opacity: 0; }
+        .opacity-50 { opacity: 0.5; }
+        .opacity-75 { opacity: 0.75; }
+        .opacity-80 { opacity: 0.8; }
+        .opacity-90 { opacity: 0.9; }
+        .opacity-100 { opacity: 1; }
+
+        /* Transform */
+        .scale-105 { transform: scale(1.05); }
+        .translate-y-1 { transform: translateY(0.25rem); }
+        .-translate-y-1 { transform: translateY(-0.25rem); }
+        .translate-y-2 { transform: translateY(0.5rem); }
+        .-translate-y-2 { transform: translateY(-0.5rem); }
+
+        /* Transitions */
+        .transition-all { transition: all 150ms ease-in-out; }
+        .transition-colors { transition: color 150ms ease-in-out, background-color 150ms ease-in-out, border-color 150ms ease-in-out; }
+        .transition-transform { transition: transform 150ms ease-in-out; }
+        .transition-opacity { transition: opacity 150ms ease-in-out; }
+
+        /* Shadows */
+        .shadow-sm { box-shadow: var(--shadow-sm); }
+        .shadow { box-shadow: var(--shadow); }
+        .shadow-md { box-shadow: var(--shadow-md); }
+        .shadow-lg { box-shadow: var(--shadow-lg); }
+        .shadow-xl { box-shadow: var(--shadow-xl); }
+
+        /* Hover States */
+        .hover\:shadow-md:hover { box-shadow: var(--shadow-md); }
+        .hover\:shadow-lg:hover { box-shadow: var(--shadow-lg); }
+        .hover\:scale-105:hover { transform: scale(1.05); }
+        .hover\:-translate-y-1:hover { transform: translateY(-0.25rem); }
+        .hover\:-translate-y-2:hover { transform: translateY(-0.5rem); }
+        .hover\:bg-muted:hover { background-color: var(--muted); }
+        .hover\:bg-primary:hover { background-color: var(--primary); }
+        .hover\:text-foreground:hover { color: var(--foreground); }
+        .hover\:text-primary-foreground:hover { color: var(--primary-foreground); }
+        .hover\:opacity-90:hover { opacity: 0.9; }
+
+        /* Border Radius */
+        .rounded { border-radius: var(--radius); }
+        .rounded-md { border-radius: var(--radius); }
+        .rounded-lg { border-radius: calc(var(--radius) * 1.5); }
+        .rounded-xl { border-radius: calc(var(--radius) * 2); }
+        .rounded-full { border-radius: 9999px; }
+
+        /* Header */
+        .header {
+            position: sticky;
+            top: 0;
+            height: var(--header-height);
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        [data-theme="dark"] .header {
+            background-color: rgba(9, 9, 11, 0.95);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            padding: 0 var(--container-padding);
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            font-weight: 600;
+            font-size: var(--font-size-lg);
+            color: var(--foreground);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--muted-foreground) 100%);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-foreground);
+            font-weight: bold;
+            font-size: var(--font-size-base);
+            transition: transform 0.2s ease;
+        }
+
+        .logo:hover .logo-icon {
+            transform: scale(1.05);
+        }
+
+        /* Navigation Links - Hidden on mobile */
+        .nav-links {
+            display: none;
+        }
+
+        /* Mobile menu button */
+        .nav-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: var(--button-height);
+            height: var(--button-height);
+            background: none;
+            border: none;
+            color: var(--foreground);
+            cursor: pointer;
+            border-radius: var(--border-radius);
+            transition: background-color 0.2s ease;
+        }
+
+        .nav-toggle:hover {
+            background-color: var(--muted);
+        }
+
+        /* Mobile menu overlay */
+        .nav-overlay {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 99;
+        }
+
+        .nav-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Mobile menu */
+        .nav-menu {
+            position: fixed;
+            top: var(--header-height);
+            right: -300px;
+            width: 280px;
+            height: calc(100vh - var(--header-height));
+            background-color: var(--background);
+            border-left: 1px solid var(--border);
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            z-index: 100;
+        }
+
+        .nav-menu.active {
+            right: 0;
+        }
+
+        .nav-menu-content {
+            padding: var(--space-6) var(--space-4);
+        }
+
+        .nav-link {
+            display: block;
+            padding: var(--space-3) var(--space-4);
+            color: var(--muted-foreground);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: var(--font-size-base);
+            border-radius: var(--border-radius);
+            transition: all 0.2s ease;
+            margin-bottom: var(--space-2);
+            min-height: var(--touch-target);
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--foreground);
+            background-color: var(--muted);
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            bottom: var(--space-4);
+            right: var(--space-4);
+            z-index: 1000;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            touch-action: manipulation;
+        }
+
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .theme-toggle:active {
+            transform: translateY(0);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .theme-toggle-icon {
+            width: 24px;
+            height: 24px;
+            transition: all 0.3s ease;
+        }
+
+        /* Icon states */
+        .theme-toggle .light-icon {
+            display: block;
+        }
+
+        .theme-toggle .dark-icon {
+            display: none;
+        }
+
+        [data-theme="dark"] .theme-toggle .light-icon {
+            display: none;
+        }
+
+        [data-theme="dark"] .theme-toggle .dark-icon {
+            display: block;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+            line-height: 1;
+            text-decoration: none;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: all 150ms ease-in-out;
+            white-space: nowrap;
+            user-select: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--secondary-foreground);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--accent);
+        }
+
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--muted-foreground);
+            border: 1px solid transparent;
+        }
+
+        .btn-ghost:hover {
+            background-color: var(--muted);
+            color: var(--foreground);
+        }
+
+        .btn-cta {
+            background-color: white;
+            color: var(--primary);
+            border: none;
+        }
+
+        .btn-cta:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .btn-cta-secondary {
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-cta-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-sm {
+            padding: var(--space-2) var(--space-4);
+            font-size: var(--font-size-xs);
+        }
+
+        .btn-lg {
+            padding: var(--space-4) var(--space-8);
+            font-size: var(--font-size-base);
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--background);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-sm);
+            transition: all 150ms ease-in-out;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-compact {
+            padding: var(--space-4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--background) 0%, var(--muted) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(0,0,0,0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+
+        [data-theme="dark"] .hero::before {
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.05) 1px, transparent 0);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-16);
+            align-items: center;
+        }
+
+        .hero-visual {
+            width: 100%;
+            height: 500px;
+            border-radius: var(--radius);
+            background: linear-gradient(45deg, var(--muted), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted-foreground);
+            font-size: var(--font-size-6xl);
+            font-weight: 300;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-visual::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%);
+            animation: shimmer 3s infinite;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border-radius: 9999px;
+            font-size: var(--font-size-sm);
+            font-weight: 600;
+            margin-bottom: var(--space-6);
+        }
+
+        .badge-secondary {
+            background-color: var(--secondary);
+            color: var(--secondary-foreground);
+            border: 1px solid var(--border);
+        }
+
+        .badge-accent {
+            background-color: var(--warning);
+            color: var(--destructive-foreground);
+        }
+
+        .badge-muted {
+            background-color: var(--muted);
+            border: 1px solid var(--border);
+            font-size: var(--font-size-xs);
+            font-weight: 500;
+            color: var(--foreground);
+        }
+
+        /* Icons */
+        .icon {
+            width: 1rem;
+            height: 1rem;
+            fill: currentColor;
+        }
+
+        .icon-sm {
+            width: 0.875rem;
+            height: 0.875rem;
+        }
+
+        .icon-lg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .icon-xl {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+
+        .icon-2xl {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .icon-3xl {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .feature-card {
+            cursor: pointer;
+        }
+
+        .feature-icon {
+            width: 3rem;
+            height: 3rem;
+            background-color: var(--muted);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--space-4);
+            color: var(--foreground);
+            transition: all 150ms ease-in-out;
+        }
+
+        .feature-card:hover .feature-icon {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            transform: scale(1.05);
+        }
+
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: var(--font-size-5xl);
+            font-weight: 700;
+            color: var(--foreground);
+            margin-bottom: var(--space-2);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--muted-foreground) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: var(--muted-foreground);
+            font-size: var(--font-size-sm);
+            font-weight: 500;
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--primary) 0%, #27272a 100%);
+            color: var(--primary-foreground);
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius);
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+            background-size: 30px 30px;
+            pointer-events: none;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta h2 {
+            color: var(--primary-foreground);
+        }
+
+        .cta p {
+            color: rgba(250, 250, 250, 0.8);
+        }
+
+        /* Timeline Component */
+        .timeline {
+            position: relative;
+            padding-left: var(--space-8);
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--space-8);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: calc(-1 * var(--space-8) - 6px);
+            top: 0;
+            width: 12px;
+            height: 12px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .timeline-year {
+            font-size: var(--font-size-sm);
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: var(--space-2);
+        }
+
+        .timeline-title {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            margin-bottom: var(--space-2);
+        }
+
+        .timeline-description {
+            color: var(--muted-foreground);
+            line-height: 1.6;
+        }
+
+        /* Quote Component */
+        .quote {
+            font-size: var(--font-size-xl);
+            font-style: italic;
+            color: var(--muted-foreground);
+            border-left: 4px solid var(--primary);
+            padding-left: var(--space-6);
+            margin: var(--space-8) 0;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--muted);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-8);
+        }
+
+        .footer-section h3 {
+            font-size: var(--font-size-base);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: var(--foreground);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: var(--space-2);
+        }
+
+        .footer-links a {
+            color: var(--muted-foreground);
+            text-decoration: none;
+            font-size: var(--font-size-sm);
+            transition: color 150ms ease-in-out;
+        }
+
+        .footer-links a:hover {
+            color: var(--foreground);
+        }
+
+        .footer-bottom {
+            margin-top: var(--space-8);
+            padding-top: var(--space-8);
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+        }
+
+        .footer-copyright {
+            color: var(--muted-foreground);
+            font-size: var(--font-size-sm);
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: var(--space-6);
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom-links a {
+            color: var(--muted-foreground);
+            text-decoration: none;
+            font-size: var(--font-size-sm);
+            transition: color 150ms ease-in-out;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--foreground);
+        }
+
+        /* Animations */
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 640px) {
+            .container {
+                max-width: 640px;
+                padding: 0 1.5rem;
+            }
+
+            .container-narrow {
+                max-width: 640px;
+                padding: 0 1.5rem;
+            }
+
+            .btn {
+                width: auto;
+                max-width: none;
+            }
+
+            .hero-title {
+                font-size: var(--font-size-5xl);
+            }
+
+            .hero-subtitle {
+                font-size: var(--font-size-xl);
+                max-width: 800px;
+                margin: 0 auto var(--space-2);
+            }
+
+            .grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-grid .order-1 {
+                order: 1;
+            }
+
+            .hero-grid .order-2 {
+                order: 2;
+            }
+
+            .footer-bottom {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px;
+                padding: 0 2rem;
+            }
+
+            .container-narrow {
+                max-width: 768px;
+                padding: 0 2rem;
+            }
+
+            .nav-toggle {
+                display: none;
+            }
+
+            .nav-overlay,
+            .nav-menu {
+                display: none;
+            }
+
+            .nav-links {
+                display: flex;
+                align-items: center;
+                gap: var(--space-2);
+            }
+
+            .nav-link {
+                display: inline-block;
+                padding: var(--space-2) var(--space-3);
+                margin-bottom: 0;
+                font-size: var(--font-size-sm);
+                min-height: auto;
+            }
+
+            .section-title {
+                font-size: var(--font-size-4xl);
+            }
+
+            .section-subtitle {
+                font-size: var(--font-size-lg);
+            }
+
+            .theme-toggle {
+                bottom: var(--space-8);
+                right: var(--space-8);
+            }
+
+            .py-24 {
+                padding-top: var(--space-24);
+                padding-bottom: var(--space-24);
+            }
+
+            .py-20 {
+                padding-top: var(--space-20);
+                padding-bottom: var(--space-20);
+            }
+
+            .py-16 {
+                padding-top: var(--space-16);
+                padding-bottom: var(--space-16);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1024px;
+            }
+
+            .hero-title {
+                font-size: var(--font-size-6xl);
+            }
+
+            .nav {
+                padding: 0 var(--space-8);
+            }
+
+            .nav-links {
+                gap: var(--space-4);
+            }
+
+            .grid-cols-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .container {
+                max-width: 1200px;
+            }
+        }
+
+        /* Mobile specific adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                padding: var(--space-12) 0 var(--space-16);
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-8);
+                text-align: center;
+            }
+
+            .hero-visual {
+                height: 300px;
+                order: -1;
+            }
+
+            .order-1,
+            .order-2 {
+                order: initial;
+            }
+
+            .hero-title {
+                font-size: var(--font-size-3xl);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: var(--space-6);
+            }
+
+            .grid-cols-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-number {
+                font-size: var(--font-size-3xl);
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-6);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-6);
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .text-6xl {
+                font-size: var(--font-size-4xl);
+            }
+
+            .text-5xl {
+                font-size: var(--font-size-3xl);
+            }
+
+            .text-4xl {
+                font-size: var(--font-size-2xl);
+            }
+
+            .py-24 {
+                padding-top: var(--space-16);
+                padding-bottom: var(--space-16);
+            }
+
+            .py-20 {
+                padding-top: var(--space-12);
+                padding-bottom: var(--space-12);
+            }
+
+            .py-16 {
+                padding-top: var(--space-10);
+                padding-bottom: var(--space-10);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 var(--space-2);
+            }
+
+            .card {
+                padding: var(--space-4);
+            }
+
+            .hero-visual {
+                height: 250px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-4);
+            }
+
+            .text-6xl {
+                font-size: var(--font-size-3xl);
+            }
+
+            .text-5xl {
+                font-size: var(--font-size-2xl);
+            }
+        }
+
+        /* Focus States */
+        .btn:focus,
+        .nav-link:focus,
+        .nav-toggle:focus,
+        .theme-toggle:focus {
+            outline: 2px solid var(--ring);
+            outline-offset: 2px;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: var(--muted);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--muted-foreground);
+            border-radius: var(--radius);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: var(--foreground);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="container flex items-center justify-between py-4">
+            <a href="https://tommysaunders.ai" class="logo">
+                <div class="logo-icon">TS</div>
+                <span>Tommy Saunders</span>
+            </a>
+            
+            <div class="flex items-center gap-4">
+                <div class="nav-links">
+                    <a href="https://tommysaunders.ai" class="nav-link">Home</a>
+                    <a href="https://tommysaunders.ai/about" class="nav-link active">About</a>
+                    <a href="https://tommysaunders.ai/portfolio" class="nav-link">Portfolio</a>
+                    <a href="https://tommysaunders.ai/contact" class="nav-link">Contact</a>
+                </div>
+                <button class="btn btn-ghost btn-sm">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                    Projects
+                </button>
+                <a href="https://tommysaunders.ai/contact" class="btn btn-primary">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    Contact
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <svg class="icon" style="width: 24px; height: 24px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="nav-overlay" onclick="toggleMobileMenu()"></div>
+        
+        <!-- Mobile Menu -->
+        <div class="nav-menu">
+            <div class="nav-menu-content">
+                <a href="https://tommysaunders.ai" class="nav-link" onclick="toggleMobileMenu()">Home</a>
+                <a href="https://tommysaunders.ai/about" class="nav-link active" onclick="toggleMobileMenu()">About</a>
+                <a href="https://tommysaunders.ai/portfolio" class="nav-link" onclick="toggleMobileMenu()">Portfolio</a>
+                <a href="https://tommysaunders.ai/market-intelligence" class="nav-link" onclick="toggleMobileMenu()">Market Intelligence</a>
+                <a href="https://tommysaunders.ai/blog" class="nav-link" onclick="toggleMobileMenu()">Resources</a>
+                <a href="https://tommysaunders.ai/projects" class="nav-link" onclick="toggleMobileMenu()">Projects</a>
+                <a href="https://tommysaunders.ai/contact" class="nav-link" onclick="toggleMobileMenu()">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <svg class="theme-toggle-icon light-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2m0 18v2M4.22 4.22l1.42 1.42m12.72 12.72l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+        <svg class="theme-toggle-icon dark-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero py-24" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-grid">
+                    <div>
+                        <div class="badge mb-8">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            AI Revenue Operations Expert
+                        </div>
+                        
+                        <h1 class="text-6xl font-bold mb-6">
+                            About
+                            <span style="background: linear-gradient(135deg, #18181b 0%, #71717a 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                                Tommy Saunders
+                            </span>
+                        </h1>
+                        
+                        <p class="text-xl text-muted mb-8 max-w-2xl">
+                            AI-Marketing Technologist, Solutions Architect, and Prompt Engineer with 13+ years 
+                            of experience bridging the gap between technical possibilities and business outcomes.
+                        </p>
+                        
+                        <div class="flex gap-4 mb-12">
+                            <a href="#experience" class="btn btn-primary btn-lg">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                                </svg>
+                                View Experience
+                            </a>
+                            <a href="#contact" class="btn btn-secondary btn-lg">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="5,3 19,12 5,21"/>
+                                </svg>
+                                Let's Connect
+                            </a>
+                        </div>
+
+                        <div class="flex items-center gap-8 text-sm text-muted">
+                            <div class="flex items-center gap-2">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                MarTech Expert
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                AI Solutions Architect
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20,6 9,17 4,12"/>
+                                </svg>
+                                Prompt Engineer
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <svg class="icon-3xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-muted py-16">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">13+</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6mo</div>
+                    <div class="stat-label">Implementation Time</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">300%</div>
+                    <div class="stat-label">Productivity Gains</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who I Am Section -->
+    <section class="py-24">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <h2 class="text-5xl font-bold mb-6">Who I Am</h2>
+                    <p class="text-xl text-muted mb-8">
+                        I'm a seasoned MarTech operations leader who specializes in transforming complex AI infrastructure 
+                        into accessible solutions.
+                    </p>
+                    
+                    <p class="text-lg mb-8" style="line-height: 1.8; color: var(--muted-foreground);">
+                        My unique position at the intersection of marketing strategy and technical 
+                        architecture allows me to build proprietary platforms that secure defensible market positions—without 
+                        the traditional complexity, cost, or time.
+                    </p>
+
+                    <p class="text-lg" style="line-height: 1.8; color: var(--muted-foreground);">
+                        My approach combines technical innovation with strategic vision, helping organizations create 
+                        intelligence that's authentic, actionable, and aligned with business objectives. I don't just 
+                        implement technology—I translate between worlds, making complex simple and turning your expertise 
+                        into scalable AI operations.
+                    </p>
+
+                    <div class="flex items-center gap-8 mt-8 text-sm text-muted">
+                        <div class="flex items-center gap-2">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Technical Bridge Builder
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Strategic Visionary
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"/>
+                            </svg>
+                            Results Architect
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <svg class="icon-3xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section class="py-24 bg-muted">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-visual order-1">
+                    <svg class="icon-3xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                        <polygon points="12,2 2,7 12,12 22,7"/>
+                        <polyline points="2,17 12,22 22,17"/>
+                        <polyline points="2,12 12,17 22,12"/>
+                    </svg>
+                </div>
+
+                <div class="order-2">
+                    <h2 class="text-5xl font-bold mb-6">What I Do</h2>
+                    <p class="text-xl text-muted mb-8">
+                        Empowering organizations to build proprietary AI-powered marketing systems that create defensible market positions.
+                    </p>
+                    
+                    <p class="text-lg mb-8" style="line-height: 1.8; color: var(--muted-foreground);">
+                        I transform disconnected tools into intelligent ecosystems through technical architecture, 
+                        automation orchestration, and prompt engineering that delivers operational AI in 6 months 
+                        instead of 18.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="card card-compact">
+                            <h4 class="font-semibold mb-2">Technical Architecture</h4>
+                            <p class="text-sm text-muted">Building scalable systems that grow with your business</p>
+                        </div>
+                        <div class="card card-compact">
+                            <h4 class="font-semibold mb-2">Automation Orchestration</h4>
+                            <p class="text-sm text-muted">Creating workflows that run themselves intelligently</p>
+                        </div>
+                        <div class="card card-compact">
+                            <h4 class="font-semibold mb-2">Prompt Engineering</h4>
+                            <p class="text-sm text-muted">Designing AI interactions that deliver consistent results</p>
+                        </div>
+                        <div class="card card-compact">
+                            <h4 class="font-semibold mb-2">System Integration</h4>
+                            <p class="text-sm text-muted">Connecting 40+ tools into one unified ecosystem</p>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn btn-primary btn-lg">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Start Your Transformation
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section class="py-24 bg-muted" id="experience">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-6">My Journey</h2>
+                <p class="text-xl text-muted max-w-3xl mx-auto">
+                    13+ years architecting innovative sales and marketing strategies, from startup growth to enterprise transformation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Professional Experience</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2020-Present</div>
+                            <div class="timeline-title">AI-Marketing Technologist & Solutions Architect</div>
+                            <div class="timeline-description">
+                                Leading AI transformation projects for B2B and B2C organizations, specializing in 
+                                MCP implementation and prompt engineering systems.
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2015-2020</div>
+                            <div class="timeline-title">MarTech Operations Leader</div>
+                            <div class="timeline-description">
+                                Built and optimized marketing technology stacks for Fortune 500 companies, 
+                                managing 40+ tool integrations and data architectures.
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2011-2015</div>
+                            <div class="timeline-title">Marketing Automation Specialist</div>
+                            <div class="timeline-description">
+                                Developed automated workflows and campaign systems, reducing manual work by 70% 
+                                across multiple organizations.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Core Expertise</h3>
+                    <div class="mb-8">
+                        <h4 class="text-lg font-semibold mb-4">Technical Skills</h4>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="badge">MarTech Architecture</span>
+                            <span class="badge">API Integration</span>
+                            <span class="badge">MCP Implementation</span>
+                            <span class="badge">Prompt Engineering</span>
+                            <span class="badge">Workflow Automation</span>
+                            <span class="badge">Data Pipeline Design</span>
+                        </div>
+                    </div>
+                    <div class="mb-8">
+                        <h4 class="text-lg font-semibold mb-4">Strategic Capabilities</h4>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="badge badge-secondary">B2B/B2C Strategy</span>
+                            <span class="badge badge-secondary">Team Leadership</span>
+                            <span class="badge badge-secondary">Change Management</span>
+                            <span class="badge badge-secondary">Process Optimization</span>
+                            <span class="badge badge-secondary">ROI Modeling</span>
+                            <span class="badge badge-secondary">Competitive Analysis</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Industry Focus</h4>
+                        <div class="flex gap-2 flex-wrap">
+                            <span class="badge badge-accent">Retail</span>
+                            <span class="badge badge-accent">SaaS</span>
+                            <span class="badge badge-accent">Financial Services</span>
+                            <span class="badge badge-accent">Healthcare</span>
+                            <span class="badge badge-accent">E-commerce</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Makes Me Different Section -->
+    <section class="py-24">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-6">What Makes Me Different</h2>
+                <p class="text-xl text-muted max-w-3xl mx-auto">
+                    The unique combination of deep technical expertise and strategic marketing vision that drives real results.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="card feature-card transition-all hover:shadow-lg">
+                    <div class="feature-icon transition-all">
+                        <svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 2,7 12,12 22,7"/>
+                            <polyline points="2,17 12,22 22,17"/>
+                            <polyline points="2,12 12,17 22,12"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Technical Bridge Builder</h3>
+                    <p class="text-muted mb-6">
+                        Most AI implementations fail because they're led by people who understand AI but not marketing, 
+                        or marketing but not AI. I've lived in both worlds, allowing me to translate between technical 
+                        possibility and marketing reality.
+                    </p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-3 py-1 bg-muted rounded-full text-xs font-medium">AI Architecture</span>
+                        <span class="px-3 py-1 bg-muted rounded-full text-xs font-medium">Marketing Strategy</span>
+                        <span class="px-3 py-1 bg-muted rounded-full text-xs font-medium">Technical Translation</span>
+                    </div>
+                </div>
+
+                <div class="card feature-card transition-all hover:shadow-lg">
+                    <div class="feature-icon transition-all">
+                        <svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">Rapid Implementation</h3>
+                    <p class="text-muted mb-6">
+                        While others take 18 months and $10M budgets, I deliver operational AI systems in 6 months 
+                        at a fraction of the cost. My frameworks and methodologies are battle-tested across dozens 
+                        of successful implementations.
+                    </p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-3 py-1 bg-muted rounded-full text-xs font-medium">6-Month Timeline</span>
+                        <span class="px-3 py-1 bg-muted rounded-full text-xs font-medium">Proven Frameworks</span>
+                        <span class="px-3 py-1 bg-muted rounded-full text-xs font-medium">Cost Efficient</span>
+                    </div>
+                </div>
+
+                <div class="card feature-card transition-all hover:shadow-lg">
+                    <div class="feature-icon transition-all">
+                        <svg class="icon-xl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4"/>
+                            <circle cx="12" cy="12" r="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4">100% Success Rate</h3>
+                    <p class="text-muted mb-6">
+                        Every project I've undertaken has delivered measurable results. From 300% productivity 
+                        improvements to 70% reduction in customer acquisition costs, my implementations create 
+                        real business value, not just technical achievements.
+                    </p>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="px-3 py-1 bg-muted rounded-full text-xs font-medium">Measurable ROI</span>
+                        <span class="px-3 py-1 bg-muted rounded-full text-xs font-medium">Business Impact</span>
+                        <span class="px-3 py-1 bg-muted rounded-full text-xs font-medium">Proven Results</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quote max-w-3xl mx-auto mt-16 text-center">
+                "I make the impossible gap between AI promise and marketing performance easy by translating 
+                complex technical requirements into practical implementations that work on day one."
+            </div>
+        </div>
+    </section>
+
+    <!-- Who I Serve Section -->
+    <section class="py-24 bg-muted">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-6">Who I Serve</h2>
+                <p class="text-xl text-muted max-w-3xl mx-auto">
+                    From ambitious mid-market companies to enterprise organizations, I help marketing leaders 
+                    transform their operations with AI.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Mass Market Impact</h3>
+                    <p class="mb-4 text-muted">
+                        I serve the mass market by democratizing enterprise-level AI transformation, making it 
+                        accessible to mid-market companies who previously couldn't afford $10M consultancy 
+                        projects or 18-month implementations.
+                    </p>
+                    <p class="text-muted">
+                        I provide the technical bridge between marketing vision and AI capability that enables 
+                        any organization to compete with industry giants.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 class="text-xl font-bold mb-4">Niche Market Expertise</h3>
+                    <p class="mb-4 text-muted">
+                        I serve niche markets by specializing in complex B2B and B2C organizations with 40+ 
+                        disconnected marketing tools, helping CMOs and marketing operations leaders who 
+                        understand the strategic value of AI but lack the technical expertise to implement it.
+                    </p>
+                    <p class="text-muted">
+                        Particularly those facing competitive pressure from AI-enabled competitors and 
+                        struggling with the marketing-IT collaboration gap.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24" id="contact">
+        <div class="container text-center">
+            <div class="cta py-24 px-8">
+                <div class="cta-content">
+                    <h2 class="text-5xl font-bold mb-6">Ready to Transform Your Marketing Operations?</h2>
+                    <p class="text-xl mb-12 max-w-3xl mx-auto">
+                        Let's discuss how I can help you build proprietary AI-powered marketing systems 
+                        that create a defensible market position.
+                    </p>
+                    <div class="flex justify-center gap-6">
+                        <a href="mailto:TommySaunders84@gmail.com" class="btn btn-cta btn-lg">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            Schedule a Strategy Session
+                        </a>
+                        <a href="https://www.linkedin.com/in/tommysaunders/" class="btn btn-cta-secondary btn-lg">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                            Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-16">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="logo-icon">TS</div>
+                        <span class="text-xl font-semibold">Tommy Saunders</span>
+                    </div>
+                    <p class="text-muted text-sm mb-6 max-w-sm">
+                        AI Revenue Operations Architect helping organizations create intelligence that's not artificial. 
+                        Building proprietary AI-powered marketing systems that deliver measurable business impact.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://github.com/tommysaunders" class="text-muted hover:text-foreground transition-colors">
+                            <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/tommysaunders/" class="text-muted hover:text-foreground transition-colors">
+                            <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="https://medium.com/@tommysaunders84" class="text-muted hover:text-foreground transition-colors">
+                            <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://tommysaunders.ai">Home</a></li>
+                        <li><a href="https://tommysaunders.ai/about">About</a></li>
+                        <li><a href="https://tommysaunders.ai/portfolio">Portfolio</a></li>
+                        <li><a href="https://tommysaunders.ai/contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Expertise</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://tommysaunders.ai/blog/martech-architecture">MarTech Architecture</a></li>
+                        <li><a href="https://tommysaunders.ai/blog/api-integration">API Integration</a></li>
+                        <li><a href="https://tommysaunders.ai/blog/infinite-operations">Infinite Operations</a></li>
+                        <li><a href="https://tommysaunders.ai/blog/prompt-engineering">Prompt Engineering</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://tommysaunders.ai/blog">Blog</a></li>
+                        <li><a href="https://tommysaunders.ai/projects">Projects</a></li>
+                        <li><a href="https://tommysaunders.ai/market-intelligence">Market Intelligence</a></li>
+                        <li><a href="https://tommysaunders.ai/resources">Tools & Templates</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    © 2024 Tommy Saunders. Creating Intelligence That's Not Artificial.
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="https://tommysaunders.ai/privacy-policy">Privacy Policy</a>
+                    <a href="https://tommysaunders.ai/terms-of-use">Terms of Use</a>
+                    <a href="https://tommysaunders.ai/cookie-policy">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Management
+        class ThemeManager {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                const savedTheme = localStorage.getItem('theme');
+                const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                const initialTheme = savedTheme || systemTheme;
+
+                this.setTheme(initialTheme);
+                this.watchSystemChanges();
+            }
+
+            setTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+
+                // Update meta theme color for mobile browsers
+                const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+                if (metaThemeColor) {
+                    const bgColor = theme === 'dark' ? '#09090b' : '#ffffff';
+                    metaThemeColor.setAttribute('content', bgColor);
+                }
+            }
+
+            toggle() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                this.setTheme(newTheme);
+            }
+
+            watchSystemChanges() {
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                    if (!localStorage.getItem('theme')) {
+                        this.setTheme(e.matches ? 'dark' : 'light');
+                    }
+                });
+            }
+        }
+
+        // Initialize theme manager
+        const themeManager = new ThemeManager();
+
+        // Global functions
+        function toggleTheme() {
+            themeManager.toggle();
+        }
+
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const navOverlay = document.querySelector('.nav-overlay');
+            const navToggle = document.querySelector('.nav-toggle');
+            
+            navMenu.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.backgroundColor = document.documentElement.getAttribute('data-theme') === 'dark' 
+                    ? 'rgba(9, 9, 11, 0.98)' 
+                    : 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.backgroundColor = document.documentElement.getAttribute('data-theme') === 'dark' 
+                    ? 'rgba(9, 9, 11, 0.95)' 
+                    : 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Button click animations
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Create ripple effect
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.cssText = `
+                    position: absolute;
+                    border-radius: 50%;
+                    transform: scale(0);
+                    animation: ripple 600ms linear;
+                    background-color: rgba(255, 255, 255, 0.3);
+                    width: ${size}px;
+                    height: ${size}px;
+                    left: ${x}px;
+                    top: ${y}px;
+                    pointer-events: none;
+                `;
+                
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Stats counter animation
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current) + (element.textContent.includes('+') ? '+' : '') + (element.textContent.includes('%') ? '%' : '');
+            }, 20);
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('stat-number')) {
+                        const text = entry.target.textContent;
+                        const number = parseInt(text.replace(/[^0-9]/g, ''));
+                        animateCounter(entry.target, number);
+                    } else {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.stat-number, .card, .feature-card').forEach(el => {
+            if (!el.classList.contains('stat-number')) {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            }
+            observer.observe(el);
+        });
+
+        // Add hover effects to feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Timeline animation
+        document.querySelectorAll('.timeline-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateX(-20px)';
+            item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+            observer.observe(item);
+        });
+
+        // Touch feedback for mobile
+        document.addEventListener('touchstart', function(e) {
+            if (e.target.matches('.btn, .nav-link, .card, .theme-toggle')) {
+                e.target.style.transform = 'scale(0.95)';
+                e.target.style.transition = 'transform 0.1s ease';
+            }
+        });
+
+        document.addEventListener('touchend', function(e) {
+            if (e.target.matches('.btn, .nav-link, .card, .theme-toggle')) {
+                e.target.style.transform = '';
+                e.target.style.transition = 'transform 0.2s ease';
+            }
+        });
+
+        // Keyboard navigation support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const navMenu = document.querySelector('.nav-menu');
+                const navOverlay = document.querySelector('.nav-overlay');
+                const navToggle = document.querySelector('.nav-toggle');
+                
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
+            }
+        });
+
+        // Initialize entrance animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroContent = document.querySelector('.hero-content');
+            heroContent.style.opacity = '0';
+            heroContent.style.transform = 'translateY(30px)';
+            heroContent.style.transition = 'opacity 1s ease, transform 1s ease';
+            
+            setTimeout(() => {
+                heroContent.style.opacity = '1';
+                heroContent.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
